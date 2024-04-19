@@ -4,6 +4,8 @@
  */
 package project_restaurant.view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author fcama
@@ -15,6 +17,12 @@ public class AccessButtonsPanel extends javax.swing.JPanel {
      */
     public AccessButtonsPanel() {
         initComponents();
+    }
+    
+    //METODO ACTION LISTENER
+    public void listen (ActionListener controller){
+        btnSignIn.addActionListener(controller);
+        btnSignUp.addActionListener(controller);
     }
 
     /**

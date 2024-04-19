@@ -16,6 +16,14 @@ public class LoginGUI extends javax.swing.JFrame {
     public LoginGUI() {
         initComponents();
     }
+    
+    public LoginButtonsPanel loginButtonsPanel(){
+        return loginButtonsPanel;
+    }
+    
+    public LoginDataPanel loginDataPanel(){
+        return loginDataPanel;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

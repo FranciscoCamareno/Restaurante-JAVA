@@ -4,6 +4,8 @@
  */
 package project_restaurant.view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author fcama
@@ -16,7 +18,11 @@ public class RegisterButtonsPanel extends javax.swing.JPanel {
     public RegisterButtonsPanel() {
         initComponents();
     }
-
+    
+    public void listen (ActionListener controller){
+        btnBack.addActionListener(controller);
+        btnSignUpRegister.addActionListener(controller);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

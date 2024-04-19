@@ -16,6 +16,14 @@ public class RegisterGUI extends javax.swing.JPanel {
     public RegisterGUI() {
         initComponents();
     }
+    
+    public RegisterButtonsPanel registerButtonsPanel(){
+        return registerButtonsPanel;
+    }
+    
+    public RegisterDataPanel registerDataPanel(){
+        return registerDataPanel;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

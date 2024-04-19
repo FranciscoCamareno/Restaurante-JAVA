@@ -4,6 +4,9 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author fcama
@@ -16,6 +19,25 @@ public class LoginDataPanel extends javax.swing.JPanel {
     public LoginDataPanel() {
         initComponents();
     }
+    
+    //METODOS SET Y GET
+    public JPasswordField getTxtPasswordLogin() {
+        return txtPasswordLogin;
+    }
+
+    public void setTxtPasswordLogin(JPasswordField txtPasswordLogin) {
+        this.txtPasswordLogin = txtPasswordLogin;
+    }
+
+    public String getTxtUserNameLogin() {
+        return txtUserNameLogin.getText();
+    }
+
+    public void setTxtUserNameLogin(String txtUserNameLogin) {
+        this.txtUserNameLogin.setText(txtUserNameLogin);
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

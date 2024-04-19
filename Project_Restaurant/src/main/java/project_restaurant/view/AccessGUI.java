@@ -16,6 +16,10 @@ public class AccessGUI extends javax.swing.JFrame {
     public AccessGUI() {
         initComponents();
     }
+    
+    public AccessButtonsPanel getAccessButtonsPanel() {
+        return accessButtonsPanel;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
