@@ -30,7 +30,6 @@ public class AccessGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        accessButtonsPanel1 = new project_restaurant.view.AccessButtonsPanel();
         accessButtonsPanel = new project_restaurant.view.AccessButtonsPanel();
         access_fondo_img = new javax.swing.JLabel();
 
@@ -38,7 +37,7 @@ public class AccessGUI extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         accessButtonsPanel.setOpaque(false);
-        getContentPane().add(accessButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 630, -1, -1));
+        getContentPane().add(accessButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, -1, -1));
 
         access_fondo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/access fondo.png"))); // NOI18N
         getContentPane().add(access_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 480, -1));
@@ -83,7 +82,6 @@ public class AccessGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private project_restaurant.view.AccessButtonsPanel accessButtonsPanel;
-    private project_restaurant.view.AccessButtonsPanel accessButtonsPanel1;
     private javax.swing.JLabel access_fondo_img;
     // End of variables declaration//GEN-END:variables
 }
