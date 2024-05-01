@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package project_restaurant.model;
 
+import project_restaurant.model.Food;
 import java.util.ArrayList;
 
 /**
