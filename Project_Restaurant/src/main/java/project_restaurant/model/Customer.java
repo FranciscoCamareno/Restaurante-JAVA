@@ -10,20 +10,20 @@ package project_restaurant.model;
  */
 public class Customer {
     private String idNumber;
-    private String name;
+    private String userName;
     private String password;
     private String eMail;
-    private String address;
+//    private String address;
 
     public Customer() {
     }
 
-    public Customer(String idNumber, String name, String password, String eMail, String address) {
+    public Customer(String idNumber, String userName, String password, String eMail) {
         this.idNumber = idNumber;
-        this.name = name;
+        this.userName = userName;
         this.password = password;
         this.eMail = eMail;
-        this.address = address;
+//        this.address = address;
     }
 
     public String getIdNumber() {
@@ -34,12 +34,12 @@ public class Customer {
         this.idNumber = idNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String name) {
+        this.userName = name;
     }
 
     public String getPassword() {
@@ -58,18 +58,23 @@ public class Customer {
         this.eMail = eMail;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
+//    public String getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
 
     @Override
     public String toString() {
-        return "Información de Cliente{" + "Identificación=" + idNumber + ", Nombre=" + name + ", Contraseña=" + password + ", Correo=" + eMail + ", Dirección=" + address + '}';
+        return "Información de Cliente{" + "Identificación=" + idNumber + ", Nombre=" + userName + 
+                ", Contraseña=" + password + ", Correo=" + eMail +'}';
     }
+    
+    //JSON methods
+    
+    
     
     
 }

@@ -1,7 +1,11 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
+project_restaurant\model\CustomerJSON.class
+project_restaurant\model\FoodWithImage.class
+project_restaurant\model\FoodArray.class
 project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\view\AccessGUI$1.class
+project_restaurant\model\JsonManagerFood.class
 project_restaurant\view\menu\NavMenuPanel.class
 project_restaurant\view\menu\MainMenuButtons.class
 project_restaurant\view\LoginButtonsPanel.class
@@ -10,7 +14,6 @@ project_restaurant\view\RegisterDataPanel.class
 project_restaurant\view\RegisterGUI.class
 project_restaurant\view\LoginGUI.class
 project_restaurant\view\RegisterButtonsPanel.class
-model\FoodArray.class
 project_restaurant\view\AccessGUI.class
-model\Food.class
+project_restaurant\model\Food.class
 project_restaurant\model\Customer.class
