@@ -14,7 +14,9 @@ public class Customer {
     private String password;
     private String eMail;
     private String address;
-
+    public static final String[] CUSTOMER_LABELS={"Identificación", "Nombre", "Contraseña", "Dirección"};
+    public static final int SIZE_CUSTOMER= CUSTOMER_LABELS.length;
+    
     public Customer() {
     }
 
@@ -64,6 +66,19 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+     public String getData(int index){
+        switch (index) {
+            case 0:
+                return idNumber;              
+            case 1:
+                return name;              
+            case 2:
+                return password;
+            case 3:
+                return address;
+        }
+        return null;
     }
 
     @Override

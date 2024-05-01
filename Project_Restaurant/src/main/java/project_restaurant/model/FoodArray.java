@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package project_restaurant.model;
-
-import project_restaurant.model.Food;
 import java.util.ArrayList;
 
 /**
