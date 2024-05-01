@@ -5,52 +5,69 @@
  */
 package model;
 
-import java.util.ArrayList;
+import org.json.simple.parser.ParseException;
 
 /**
  *
  * @author valer
  */
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class FoodArray {
-    
-    private ArrayList<Food> foodArray;
+
+    private List<FoodWithImage> foodArray;
 
     public FoodArray() {
-        foodArray = new ArrayList();
+        foodArray = new ArrayList<>();
     }
 
-    public String addFood(Food food) {
-        if (foodArray.add(food)) {
+    public String addFood(FoodWithImage foodWithImage) {
+        if (foodArray.add(foodWithImage)) {
             return "Comida agregada exitosamente";
         }
         return "Error al registrar la comida";
     }
 
-    public String removeFood(Food food) {
-        if (foodArray.remove(food)) {
+    public String removeFood(FoodWithImage foodWithImage) {
+        if (foodArray.remove(foodWithImage)) {
             return "La comida fue eliminada exitosamente";
         }
         return "Error al eliminar la comida";
     }
 
-    public Food findFood(String idNumber) {
-        for (int i = 0; i < foodArray.size(); i++) {
-            if (foodArray.get(i).getIdNumber().equalsIgnoreCase(idNumber));
-            return foodArray.get(i);
+    public FoodWithImage findFood(String idNumber) {
+        for (FoodWithImage foodWithImage : foodArray) {
+            if (foodWithImage.getFood().getIdNumber().equalsIgnoreCase(idNumber)) {
+                return foodWithImage;
+            }
         }
         return null;
     }
 
-    @Override
-    public String toString() {
-
-        String foods = "Las comidas agregadas al pedido son las siguientes: \n";
-
-        for (int iFoods = 0; iFoods < foodArray.size(); iFoods++) {
-            foods += foodArray.get(iFoods);
+    public void saveFoodToFile(String fileName) {
+        try {
+            JsonManagerFood.saveToFile(fileName, foodArray);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-        return foods;
     }
 
+    public void loadFoodFromFile(String fileName) {
+        try {
+            foodArray = JsonManagerFood.loadWithImagesFromFile(fileName);
+        } catch (IOException | ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public String toString() {
+        String foods = "Las comidas agregadas al pedido son las siguientes: \n";
+        for (FoodWithImage foodWithImage : foodArray) {
+            foods += foodWithImage.getFood().toString() + "\n";
+        }
+        return foods;
+    }
 }
