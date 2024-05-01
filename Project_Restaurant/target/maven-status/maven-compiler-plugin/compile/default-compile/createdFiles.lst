@@ -13,3 +13,4 @@ project_restaurant\view\RegisterButtonsPanel.class
 model\FoodArray.class
 project_restaurant\view\AccessGUI.class
 model\Food.class
+project_restaurant\model\Customer.class
