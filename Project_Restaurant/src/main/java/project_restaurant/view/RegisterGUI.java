@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package project_restaurant.view;
 
@@ -8,7 +8,7 @@ package project_restaurant.view;
  *
  * @author fcama
  */
-public class RegisterGUI extends javax.swing.JPanel {
+public class RegisterGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form RegisterGUI
@@ -17,6 +17,7 @@ public class RegisterGUI extends javax.swing.JPanel {
         initComponents();
     }
     
+    
     public RegisterButtonsPanel registerButtonsPanel(){
         return registerButtonsPanel;
     }
@@ -24,6 +25,8 @@ public class RegisterGUI extends javax.swing.JPanel {
     public RegisterDataPanel registerDataPanel(){
         return registerDataPanel;
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,23 +39,26 @@ public class RegisterGUI extends javax.swing.JPanel {
 
         registerButtonsPanel = new project_restaurant.view.RegisterButtonsPanel();
         registerDataPanel = new project_restaurant.view.RegisterDataPanel();
-        fondoRegistro = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         registerButtonsPanel.setOpaque(false);
-        add(registerButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 670, -1, -1));
+        getContentPane().add(registerButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 660, -1, -1));
 
         registerDataPanel.setOpaque(false);
-        add(registerDataPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 400, 430));
+        getContentPane().add(registerDataPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 390, 430));
 
-        fondoRegistro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo rojo base.png"))); // NOI18N
-        add(fondoRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo rojo base.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel fondoRegistro;
+    private javax.swing.JLabel jLabel1;
     private project_restaurant.view.RegisterButtonsPanel registerButtonsPanel;
     private project_restaurant.view.RegisterDataPanel registerDataPanel;
     // End of variables declaration//GEN-END:variables

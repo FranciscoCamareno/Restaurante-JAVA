@@ -70,11 +70,7 @@ public class Customer {
     public String toString() {
         return "Información de Cliente{" + "Identificación=" + idNumber + ", Nombre=" + userName + 
                 ", Contraseña=" + password + ", Correo=" + eMail +'}';
-    }
-    
-    //JSON methods
-    
-    
+    }    
     
     
 }
