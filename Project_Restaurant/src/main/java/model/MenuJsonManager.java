@@ -20,16 +20,16 @@ import java.util.logging.Logger;
 import org.json.simple.parser.ParseException;
 
 /**
- *
- * @author eveba
- */
-//    Son tres pasos, faciles de recordar.
-//    La primera vez se ejecutan los dos primeros, el tercero se puede ejecutar, pero en este proyecto no creo que sea necesario.
-//    La segunda vez, solo se ejecuta el tercero, por que si no, se sobre escriben,
-//    En esta clase no es peligroso, por que siempre es la misma informacion, pero no esta de mas ser precavidos.
-//    1. addProductsToJson()
-//    2. writeJSON()
-//    3. readJSON()
+*
+*  @author eveba
+*   Son tres pasos, faciles de recordar.
+*   La primera vez se ejecutan los dos primeros, el tercero se puede ejecutar, pero en este proyecto no creo que sea necesario.
+*   La segunda vez, solo se ejecuta el tercero, por que si no, se sobre escriben,
+*   En esta clase no es peligroso, por que siempre es la misma informacion, pero no esta de mas ser precavidos.
+*   1. addProductsToJson()
+*   2. writeJSON()
+*   3. readJSON()
+*/
 public class MenuJsonManager {
 
     JSONObject baseJSONObject;
