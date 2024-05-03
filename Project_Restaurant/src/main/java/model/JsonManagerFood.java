@@ -7,7 +7,6 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +16,7 @@ import java.util.List;
  */
 public class JsonManagerFood {
     
-     public static void saveToFile(String fileName, List<FoodWithImage> foodList) throws IOException {
+     public static void saveFoodWithImagesToFile(String fileName, List<FoodWithImage> foodList) {
         JSONArray jsonArray = new JSONArray();
         for (FoodWithImage foodWithImage : foodList) {
             JSONObject foodObject = new JSONObject();
@@ -30,22 +29,28 @@ public class JsonManagerFood {
         }
         try (FileWriter file = new FileWriter(fileName)) {
             file.write(jsonArray.toJSONString());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    public static List<FoodWithImage> loadWithImagesFromFile(String fileName) throws IOException, ParseException {
+    public static List<FoodWithImage> loadFoodWithImagesFromFile(String fileName) {
         JSONParser parser = new JSONParser();
         List<FoodWithImage> foodList = new ArrayList<>();
-        JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(fileName));
-        for (Object obj : jsonArray) {
-            JSONObject foodObject = (JSONObject) obj;
-            String idNumber = (String) foodObject.get("idNumber");
-            String name = (String) foodObject.get("name");
-            String description = (String) foodObject.get("description");
-            double price = (Double) foodObject.get("price");
-            String imagePath = (String) foodObject.get("imagePath");
-            Food food = new Food(idNumber, name, description, price);
-            foodList.add(new FoodWithImage(food, imagePath));
+        try {
+            JSONArray jsonArray = (JSONArray) parser.parse(new FileReader(fileName));
+            for (Object obj : jsonArray) {
+                JSONObject foodObject = (JSONObject) obj;
+                String idNumber = (String) foodObject.get("idNumber");
+                String name = (String) foodObject.get("name");
+                String description = (String) foodObject.get("description");
+                double price = (Double) foodObject.get("price");
+                String imagePath = (String) foodObject.get("imagePath");
+                Food food = new Food(idNumber, name, description, price);
+                foodList.add(new FoodWithImage(food, imagePath));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return foodList;
     }
