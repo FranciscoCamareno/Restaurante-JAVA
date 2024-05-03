@@ -189,7 +189,6 @@ public class MenuJsonManager {
                 food.setDescription((String) menuJSON.get("description"));
                 food.setPrice((double) menuJSON.get("price"));
                 food.setCategory((String) menuJSON.get("category"));
-                System.out.println(food.toString());
             }
         } catch (FileNotFoundException ex) {
             System.out.println("Error reading file");

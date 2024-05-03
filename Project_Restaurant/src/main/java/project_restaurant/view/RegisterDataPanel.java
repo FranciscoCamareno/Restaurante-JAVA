@@ -6,6 +6,7 @@ package project_restaurant.view;
 
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import project_restaurant.controller.*;
 
 /**
  *
@@ -29,12 +30,12 @@ public class RegisterDataPanel extends javax.swing.JPanel {
         this.txtEmail.setText(txtEmail);
     }
 
-    public JPasswordField getTxtPasswordRegister() {
-        return txtPasswordRegister;
+    public String getTxtPasswordRegister() {
+        return txtPasswordRegister.toString();
     }
 
-    public void setTxtPasswordRegister(JPasswordField txtPasswordRegister) {
-        this.txtPasswordRegister = txtPasswordRegister;
+    public void setTxtPasswordRegister(String txtPasswordRegister) {
+        this.txtPasswordRegister.setText(txtPasswordRegister);
     }
 
     public String getTxtUserNameRegister() {
@@ -45,7 +46,9 @@ public class RegisterDataPanel extends javax.swing.JPanel {
         this.txtUserNameRegister.setText(txtUserNameRegister);
     }
     
-    
+    public void listen(CustomerRegisterController controller){
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
