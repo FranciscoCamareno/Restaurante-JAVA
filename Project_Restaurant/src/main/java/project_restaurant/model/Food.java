@@ -11,29 +11,17 @@ public class Food {
     private String name;
     private String description;
     private double price;
+    private String category; // Nueva propiedad para la categoría
 
-    public Food(String idNumber, String name, String description, double price) {
+    public Food(String idNumber, String name, String description, double price, String category) {
         this.idNumber = idNumber;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.category = category;
     }
 
-    public String getIdNumber() {
-        return idNumber;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public double getPrice() {
-        return price;
-    }
+    // Getters y setters
 
     @SuppressWarnings("unchecked")
     public JSONObject toJson() {
@@ -42,6 +30,7 @@ public class Food {
         jsonFood.put("name", name);
         jsonFood.put("description", description);
         jsonFood.put("price", price);
+        jsonFood.put("category", category);
         return jsonFood;
     }
 
@@ -50,7 +39,8 @@ public class Food {
         String name = (String) jsonFood.get("name");
         String description = (String) jsonFood.get("description");
         double price = (Double) jsonFood.get("price");
-        return new Food(idNumber, name, description, price);
+        String category = (String) jsonFood.get("category"); 
+        return new Food(idNumber, name, description, price, category);
     }
 
     @Override
@@ -60,6 +50,7 @@ public class Food {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", price=" + price +
+                ", category='" + category + '\'' + 
                 '}';
     }
 }
