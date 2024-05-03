@@ -21,6 +21,11 @@ public class Food {
         this.category = category;
     }
 
+    public Food() {
+    }
+    
+    
+
     // Getters y setters
 
     @SuppressWarnings("unchecked")
@@ -53,4 +58,46 @@ public class Food {
                 ", category='" + category + '\'' + 
                 '}';
     }
+
+    public String getIdNumber() {
+        return idNumber;
+    }
+
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    
+    
 }
