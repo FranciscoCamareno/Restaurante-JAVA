@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterButtonsPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\model\FoodArray.java
@@ -12,3 +13,25 @@ D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\model\Food
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessButtonsPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginDataPanel.java
+=======
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\Customer.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\FoodArray.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerRegisterController.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\CustomerJSON.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterDataPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\MainMenuButtons.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessButtonsPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginGUI.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginDataPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerLoginController.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\Food.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\NavMenuPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\AppetizerMenuGUI.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessGUI.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterGUI.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginButtonsPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\MainMenuGUI.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\MenuJsonManager.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterButtonsPanel.java
+C:\Descargas\Progra\Restaurante-JAVA\Project_Restaurant\src\main\java\project_restaurant\model\FoodWithImage.java
+>>>>>>> Stashed changes

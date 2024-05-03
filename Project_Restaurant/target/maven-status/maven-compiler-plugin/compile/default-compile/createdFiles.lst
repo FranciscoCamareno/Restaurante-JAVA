@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 project_restaurant\view\menu\AppetizerMenuGUI.class
 project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
@@ -13,3 +14,5 @@ project_restaurant\view\RegisterButtonsPanel.class
 model\FoodArray.class
 project_restaurant\view\AccessGUI.class
 model\Food.class
+=======
+>>>>>>> Stashed changes
