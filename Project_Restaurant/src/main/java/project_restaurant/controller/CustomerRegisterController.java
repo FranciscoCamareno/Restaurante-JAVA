@@ -21,12 +21,15 @@ public class CustomerRegisterController implements ActionListener, MouseListener
     private RegisterDataPanel registerDataPanel;
     private RegisterButtonsPanel registerButtonsPanel;
     private Customer customer;
+    private CustomerArray customerArray;
     private CustomerJSON customerJSON;
+    private static int numero = 1;
     
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
         registerDataPanel = new RegisterDataPanel();
         registerButtonsPanel = new RegisterButtonsPanel();
+        customerArray = new CustomerArray();
         registerButtonsPanel.listen(this);
         registerDataPanel.listen(this);
         registerGUI.listen(this);
@@ -39,21 +42,27 @@ public class CustomerRegisterController implements ActionListener, MouseListener
     public void actionPerformed(ActionEvent e) {
         switch(e.getActionCommand()){
             case "Sign-Up":
-                String idNumber = "";
+                String idNumber = String.valueOf(generarNumero());
                 String userName = registerDataPanel.getTxtUserNameRegister();
                 String eMail = registerDataPanel.getTxtEmail();
                 String password = registerDataPanel.getTxtPasswordRegister();
                 
                 customer = new Customer(idNumber, userName, password, eMail);
-                customerJSON = new CustomerJSON();
-                customerJSON.addCustomerJSON(customer);
+//                customerJSON = new CustomerJSON();
+//                customerJSON.addCustomerJSON(customer);
+                customerArray.add(customer);
                 System.out.println("El cliente fue registrado con éxito");
                 break;
             case "Back":
                 break;
         }
     }
+    
+    
 
+    public static int generarNumero() {
+        return numero++;
+    }
     
     
     

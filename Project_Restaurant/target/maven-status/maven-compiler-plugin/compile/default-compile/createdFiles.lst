@@ -5,9 +5,11 @@ project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\model\MenuJsonManager.class
 project_restaurant\view\menu\NavMenuPanel.class
 project_restaurant\view\menu\MainMenuButtons.class
+project_restaurant\model\CustomerArray.class
 project_restaurant\controller\CustomerLoginController.class
 project_restaurant\view\LoginButtonsPanel.class
 project_restaurant\view\LoginDataPanel.class
+project_restaurant\controller\CustomerController.class
 project_restaurant\controller\CustomerRegisterController.class
 project_restaurant\view\RegisterDataPanel.class
 project_restaurant\view\RegisterGUI.class

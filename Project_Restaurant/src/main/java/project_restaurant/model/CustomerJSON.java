@@ -4,6 +4,7 @@
  */
 package project_restaurant.model;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import org.json.simple.JSONArray;
@@ -16,13 +17,12 @@ import org.json.simple.JSONObject;
 public class CustomerJSON {
     JSONObject baseObjectJSON;
     private Customer customer;
-    
+    private File archivoCustomer;
     
     public CustomerJSON() {
     this.baseObjectJSON = new JSONObject();
     }
-    
-    
+       
     public void addCustomerJSON(Customer customer){
         JSONObject registroUsuario = new JSONObject();
         registroUsuario.put("identificación", customer.getIdNumber());
@@ -32,7 +32,8 @@ public class CustomerJSON {
         
         this.baseObjectJSON.put("User", registroUsuario);
         // Guardar el objeto JSON en un archivo
-        try (FileWriter file = new FileWriter("registroUsuario.json")) {
+        try {
+            FileWriter file = new FileWriter("registroUsuario.json");
             file.write(this.baseObjectJSON.toJSONString());
             file.flush();
             file.close();

@@ -1,6 +1,7 @@
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerLoginController.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\model\MenuJsonManager.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginGUI.java
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerController.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterButtonsPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\AppetizerMenuGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginButtonsPanel.java
@@ -16,3 +17,4 @@ D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_re
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessButtonsPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginDataPanel.java
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\model\CustomerArray.java
