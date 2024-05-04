@@ -20,7 +20,7 @@ public class RegisterDataPanel extends javax.swing.JPanel {
     public RegisterDataPanel() {
         initComponents();
     }
-    
+
     //METODOS SET Y GET 
     public String getTxtEmail() {
         return txtEmail.getText();
@@ -31,7 +31,7 @@ public class RegisterDataPanel extends javax.swing.JPanel {
     }
 
     public String getTxtPasswordRegister() {
-        return txtPasswordRegister.toString();
+        return new String(txtPasswordRegister.getPassword());
     }
 
     public void setTxtPasswordRegister(String txtPasswordRegister) {
@@ -45,11 +45,10 @@ public class RegisterDataPanel extends javax.swing.JPanel {
     public void setTxtUserNameRegister(String txtUserNameRegister) {
         this.txtUserNameRegister.setText(txtUserNameRegister);
     }
-    
-    public void listen(CustomerRegisterController controller){
-        
-    }
 
+    
+//    public void listen(CustomerRegisterController controller){
+//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

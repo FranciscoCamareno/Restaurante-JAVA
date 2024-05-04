@@ -88,9 +88,10 @@ public class CustomerArray {
             objJSONcustomer.put("eMail", customer.geteMail());
 
             arrayCustomer.add(objJSONcustomer);
+            
         }
         this.baseJSONcustomer.put("CustomerList", arrayCustomer);
-
+        
         try {
             FileWriter write = new FileWriter(archivoCustomer);
             write.write(this.baseJSONcustomer.toJSONString());
@@ -99,7 +100,7 @@ public class CustomerArray {
         } catch (IOException ex) {
             System.err.println("Error creating file");
         }
-
+    
     }
     
     //METODO LEER JSON
@@ -114,10 +115,10 @@ public class CustomerArray {
                 JSONObject objCustomer=(JSONObject) object;
                 Customer customer= new Customer();
                 customer.setIdNumber((String) objCustomer.get("id"));
-                customer.setPassword((String) objCustomer.get("UserName"));
-                customer.setUserName((String) objCustomer.get("Password"));
+                customer.setPassword((String) objCustomer.get("Password")); 
+                customer.setUserName((String) objCustomer.get("UserName"));
                 customer.seteMail((String) objCustomer.get("eMail"));
-                this.customerList.add(customer);
+                customerList.add(customer);
             }
         } catch (FileNotFoundException ex) {
              System.err.println("Error reading file");
@@ -128,5 +129,34 @@ public class CustomerArray {
         }
     }
     
+    
+    
+    
+    /////////////
+    public void rewriteJSON() {
+    JSONArray arrayCustomer = new JSONArray();
+    baseJSONcustomer = new JSONObject();
+
+    for (Customer customer : customerList) {
+        JSONObject objJSONcustomer = new JSONObject();
+        objJSONcustomer.put("id", customer.getIdNumber());
+        objJSONcustomer.put("UserName", customer.getUserName());
+        objJSONcustomer.put("Password", customer.getPassword());
+        objJSONcustomer.put("eMail", customer.geteMail());
+
+        arrayCustomer.add(objJSONcustomer);
+    }
+    this.baseJSONcustomer.put("CustomerList", arrayCustomer);
+
+    try {
+        FileWriter write = new FileWriter(archivoCustomer);
+        write.write(this.baseJSONcustomer.toJSONString());
+        write.flush();
+        write.close();
+    } catch (IOException ex) {
+        System.err.println("Error creating file");
+    }
+}
+
 
 }

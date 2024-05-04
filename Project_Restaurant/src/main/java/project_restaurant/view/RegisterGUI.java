@@ -30,7 +30,6 @@ public class RegisterGUI extends javax.swing.JFrame {
     
     public void listen(CustomerRegisterController controller){
         registerButtonsPanel.listen(controller);
-        registerDataPanel.listen(controller);
     }
     
     

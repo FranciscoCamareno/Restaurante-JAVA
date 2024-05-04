@@ -8,7 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import javax.swing.JOptionPane;
+import java.io.FileWriter;
+import java.io.IOException;
 import project_restaurant.view.*;
 import project_restaurant.model.*;
 
@@ -16,56 +17,51 @@ import project_restaurant.model.*;
  *
  * @author fcama
  */
-public class CustomerRegisterController implements ActionListener, MouseListener{
+public class CustomerRegisterController implements ActionListener, MouseListener {
+
     private RegisterGUI registerGUI;
     private RegisterDataPanel registerDataPanel;
     private RegisterButtonsPanel registerButtonsPanel;
     private Customer customer;
     private CustomerArray customerArray;
     private CustomerJSON customerJSON;
-    private static int numero = 1;
-    
+
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
         registerDataPanel = new RegisterDataPanel();
         registerButtonsPanel = new RegisterButtonsPanel();
         customerArray = new CustomerArray();
+//        registerDataPanel.listen(this);
         registerButtonsPanel.listen(this);
-        registerDataPanel.listen(this);
         registerGUI.listen(this);
         registerGUI.setLocationRelativeTo(null);
         registerGUI.setVisible(true);
     }
-    
+
     //metodo action listener
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch(e.getActionCommand()){
+        switch (e.getActionCommand()) {
             case "Sign-Up":
-                String idNumber = String.valueOf(generarNumero());
-                String userName = registerDataPanel.getTxtUserNameRegister();
-                String eMail = registerDataPanel.getTxtEmail();
-                String password = registerDataPanel.getTxtPasswordRegister();
-                
-                customer = new Customer(idNumber, userName, password, eMail);
-//                customerJSON = new CustomerJSON();
-//                customerJSON.addCustomerJSON(customer);
-                customerArray.add(customer);
-                System.out.println("El cliente fue registrado con éxito");
+                String idNumber = "1";
+                String userName = registerDataPanel.getTxtUserNameRegister(); // Obteniendo el texto del campo de nombre de usuario
+                String eMail = registerDataPanel.getTxtEmail(); // Obteniendo el texto del campo de correo electrónico
+                String password = registerDataPanel.getTxtPasswordRegister(); // Obteniendo el texto del campo de contraseña
+
+                if (userName.isEmpty() || eMail.isEmpty() || password.isEmpty()) {
+                    System.out.println("Por favor, rellene todos los campos antes de registrar.");
+                } else {
+                    customer = new Customer(idNumber, userName, password, eMail);
+                    customerArray.add(customer);
+                    System.out.println("El cliente fue registrado con éxito");
+                }
+
                 break;
             case "Back":
                 break;
         }
     }
-    
-    
 
-    public static int generarNumero() {
-        return numero++;
-    }
-    
-    
-    
     //metodo mouse listener
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -86,11 +82,9 @@ public class CustomerRegisterController implements ActionListener, MouseListener
     @Override
     public void mouseExited(MouseEvent e) {
     }
- 
-    
+
     public static void main(String[] args) {
         new CustomerRegisterController();
     }
-    
-    
+
 }
