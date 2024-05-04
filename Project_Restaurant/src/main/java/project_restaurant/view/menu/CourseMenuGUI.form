@@ -24,7 +24,7 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Component class="project_restaurant.view.menu.NavMenuPanel" name="navMenuPanel1">
+    <Component class="project_restaurant.view.menu.NavMenuPanel" name="navMenuPanel">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="8" y="7" width="-1" height="-1"/>
