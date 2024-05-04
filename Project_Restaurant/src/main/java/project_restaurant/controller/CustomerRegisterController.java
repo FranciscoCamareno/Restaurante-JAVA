@@ -31,7 +31,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
         registerDataPanel = new RegisterDataPanel();
         registerButtonsPanel = new RegisterButtonsPanel();
         customerArray = new CustomerArray();
-//        registerDataPanel.listen(this);
+        registerDataPanel = registerGUI.getRegisterDataPanel();
         registerButtonsPanel.listen(this);
         registerGUI.listen(this);
         registerGUI.setLocationRelativeTo(null);
@@ -58,6 +58,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
 
                 break;
             case "Back":
+               registerGUI.dispose();
                 break;
         }
     }

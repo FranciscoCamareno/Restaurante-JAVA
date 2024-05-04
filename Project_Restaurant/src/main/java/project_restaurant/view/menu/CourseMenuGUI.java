@@ -8,12 +8,12 @@ package project_restaurant.view.menu;
  *
  * @author fcama
  */
-public class AppetizerMenuGUI extends javax.swing.JFrame {
+public class CourseMenuGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form AppetizerMenuGUI
+     * Creates new form CourseMenuGUI
      */
-    public AppetizerMenuGUI() {
+    public CourseMenuGUI() {
         initComponents();
     }
 

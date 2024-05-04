@@ -1,3 +1,4 @@
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\CourseMenuGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerLoginController.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\model\MenuJsonManager.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginGUI.java
@@ -5,6 +6,7 @@ D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_re
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterButtonsPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\AppetizerMenuGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginButtonsPanel.java
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\DrinkMenuGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\controller\CustomerRegisterController.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\MainMenuGUI.java
@@ -14,7 +16,9 @@ D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_re
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\NavMenuPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\RegisterDataPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\model\Food.java
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\ObjectDishPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\AccessButtonsPanel.java
+D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\menu\DessertsMenuGUI.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\view\LoginDataPanel.java
 D:\Descargas\Progra\Restaurante JAVA\Project_Restaurant\src\main\java\project_restaurant\model\CustomerArray.java

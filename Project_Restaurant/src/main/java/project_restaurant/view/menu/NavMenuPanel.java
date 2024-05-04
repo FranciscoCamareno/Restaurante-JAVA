@@ -27,7 +27,7 @@ public class NavMenuPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnExitNav = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnAkariNav = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -37,10 +37,10 @@ public class NavMenuPanel extends javax.swing.JPanel {
         btnExitNav.setContentAreaFilled(false);
         add(btnExitNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 40, 40));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/font akari.png"))); // NOI18N
-        jButton1.setActionCommand("Akari");
-        jButton1.setContentAreaFilled(false);
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 130, 50));
+        btnAkariNav.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/font akari.png"))); // NOI18N
+        btnAkariNav.setActionCommand("Akari");
+        btnAkariNav.setContentAreaFilled(false);
+        add(btnAkariNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 130, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nav.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
@@ -48,8 +48,8 @@ public class NavMenuPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAkariNav;
     private javax.swing.JButton btnExitNav;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

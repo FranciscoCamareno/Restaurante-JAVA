@@ -8,12 +8,12 @@ package project_restaurant.view.menu;
  *
  * @author fcama
  */
-public class AppetizerMenuGUI extends javax.swing.JFrame {
+public class DessertsMenuGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form AppetizerMenuGUI
+     * Creates new form DessertsMenuGUI
      */
-    public AppetizerMenuGUI() {
+    public DessertsMenuGUI() {
         initComponents();
     }
 
@@ -42,6 +42,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

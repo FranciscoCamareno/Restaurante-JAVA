@@ -17,14 +17,15 @@ public class RegisterGUI extends javax.swing.JFrame {
      */
     public RegisterGUI() {
         initComponents();
+        
     }
     
     
-    public RegisterButtonsPanel registerButtonsPanel(){
+    public RegisterButtonsPanel getRegisterButtonsPanel(){
         return registerButtonsPanel;
     }
     
-    public RegisterDataPanel registerDataPanel(){
+    public RegisterDataPanel getRegisterDataPanel(){
         return registerDataPanel;
     }
     
