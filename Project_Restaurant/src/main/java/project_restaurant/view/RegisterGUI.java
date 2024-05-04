@@ -4,6 +4,8 @@
  */
 package project_restaurant.view;
 
+import project_restaurant.controller.CustomerRegisterController;
+
 /**
  *
  * @author fcama
@@ -24,6 +26,11 @@ public class RegisterGUI extends javax.swing.JFrame {
     
     public RegisterDataPanel registerDataPanel(){
         return registerDataPanel;
+    }
+    
+    public void listen(CustomerRegisterController controller){
+        registerButtonsPanel.listen(controller);
+        registerDataPanel.listen(controller);
     }
     
     

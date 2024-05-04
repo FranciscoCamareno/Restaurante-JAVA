@@ -30,12 +30,14 @@ public class CustomerJSON {
         registroUsuario.put("contraseña", customer.getPassword());
         registroUsuario.put("correo", customer.geteMail());
         
+        this.baseObjectJSON.put("User", registroUsuario);
         // Guardar el objeto JSON en un archivo
         try (FileWriter file = new FileWriter("registroUsuario.json")) {
-            file.write(registroUsuario.toString());
+            file.write(this.baseObjectJSON.toJSONString());
             file.flush();
+            file.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error creating file");
         }
         
     }

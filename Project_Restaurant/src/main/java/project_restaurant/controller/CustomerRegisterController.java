@@ -29,6 +29,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
         registerButtonsPanel = new RegisterButtonsPanel();
         registerButtonsPanel.listen(this);
         registerDataPanel.listen(this);
+        registerGUI.listen(this);
         registerGUI.setLocationRelativeTo(null);
         registerGUI.setVisible(true);
     }
@@ -44,6 +45,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
                 String password = registerDataPanel.getTxtPasswordRegister();
                 
                 customer = new Customer(idNumber, userName, password, eMail);
+                customerJSON = new CustomerJSON();
                 customerJSON.addCustomerJSON(customer);
                 System.out.println("El cliente fue registrado con éxito");
                 break;

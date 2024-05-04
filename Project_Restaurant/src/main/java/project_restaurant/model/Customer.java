@@ -9,11 +9,13 @@ package project_restaurant.model;
  * @author anaag
  */
 public class Customer {
+
     private String idNumber;
     private String userName;
     private String password;
     private String eMail;
-//    private String address;
+    public static final String[] CUSTOMER_LABELS = {"Identificación", "Nombre", "Contraseña", "Dirección"};
+    public static final int SIZE_CUSTOMER = CUSTOMER_LABELS.length;
 
     public Customer() {
     }
@@ -23,7 +25,6 @@ public class Customer {
         this.userName = userName;
         this.password = password;
         this.eMail = eMail;
-//        this.address = address;
     }
 
     public String getIdNumber() {
@@ -38,8 +39,8 @@ public class Customer {
         return userName;
     }
 
-    public void setUserName(String name) {
-        this.userName = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -58,19 +59,22 @@ public class Customer {
         this.eMail = eMail;
     }
 
-//    public String getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(String address) {
-//        this.address = address;
-//    }
+
+    public String getData(int index) {
+        switch (index) {
+            case 0:
+                return idNumber;
+            case 1:
+                return userName;
+            case 2:
+                return password;
+        }
+        return null;
+    }
 
     @Override
     public String toString() {
-        return "Información de Cliente{" + "Identificación=" + idNumber + ", Nombre=" + userName + 
-                ", Contraseña=" + password + ", Correo=" + eMail +'}';
-    }    
-    
-    
+        return "Información de Cliente{" + "Identificación=" + idNumber + ", Nombre=" + userName + ", Contraseña=" + password + ", Correo=" + eMail +'}';
+    }
+
 }

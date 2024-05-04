@@ -1,10 +1,8 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
 project_restaurant\model\CustomerJSON.class
-project_restaurant\model\FoodWithImage.class
-project_restaurant\model\FoodArray.class
 project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
-project_restaurant\model\JsonManagerFood.class
+project_restaurant\model\MenuJsonManager.class
 project_restaurant\view\menu\NavMenuPanel.class
 project_restaurant\view\menu\MainMenuButtons.class
 project_restaurant\controller\CustomerLoginController.class
