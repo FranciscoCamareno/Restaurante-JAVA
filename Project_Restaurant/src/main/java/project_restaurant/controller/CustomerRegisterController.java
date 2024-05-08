@@ -38,6 +38,10 @@ public class CustomerRegisterController implements ActionListener, MouseListener
         registerGUI.setVisible(true);
     }
 
+    public RegisterGUI getRegisterGUI() {
+        return registerGUI;
+    }
+
     //metodo action listener
     @Override
     public void actionPerformed(ActionEvent e) {

@@ -1,5 +1,6 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
 project_restaurant\model\CustomerJSON.class
+project_restaurant\controller\HomepageController.class
 project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\model\MenuJsonManager.class

@@ -29,8 +29,10 @@ public class CustomerLoginController implements ActionListener, MouseListener{
         loginGUI.setLocationRelativeTo(null);
         loginGUI.setVisible(true);
     }
-    
-    
+
+    public LoginGUI getLoginGUI() {
+        return loginGUI;
+    }
     
     
     //metodos action listener
