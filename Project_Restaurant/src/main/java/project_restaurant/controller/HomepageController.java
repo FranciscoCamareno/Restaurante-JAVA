@@ -1,21 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package project_restaurant.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import project_restaurant.view.AccessButtonsPanel;
-import project_restaurant.view.AccessGUI;
-import project_restaurant.view.LoginGUI;
-import project_restaurant.view.RegisterGUI;
+import project_restaurant.view.menu.*;
+import project_restaurant.view.*;
+import project_restaurant.model.*;
 
-/**
- *
- * @author valer
- */
+
 public class HomepageController implements ActionListener {
 
     AccessGUI accessGUI;
@@ -24,6 +16,7 @@ public class HomepageController implements ActionListener {
     LoginGUI loginGUI;
     CustomerLoginController customerLoginController;
     CustomerRegisterController customerRegisterController;
+    
 
     public HomepageController() {
 
@@ -65,5 +58,7 @@ public class HomepageController implements ActionListener {
     public static void main(String[] args) {
         new HomepageController();
     }
+
+    
 
 }

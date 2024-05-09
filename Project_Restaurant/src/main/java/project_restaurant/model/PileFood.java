@@ -4,10 +4,7 @@
  */
 package project_restaurant.model;
 
-/**
- *
- * @author eveba
- */
+
 public class PileFood {
 
     private int length;

@@ -1,40 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package project_restaurant.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.io.FileWriter;
-import java.io.IOException;
 import project_restaurant.view.*;
 import project_restaurant.model.*;
 
-/**
- *
- * @author fcama
- */
-public class CustomerRegisterController implements ActionListener, MouseListener {
+public class CustomerRegisterController implements ActionListener {
 
     private RegisterGUI registerGUI;
+    private AccessGUI accessGUI;
+    private AccessButtonsPanel accessButtonsPanel;
     private RegisterDataPanel registerDataPanel;
     private RegisterButtonsPanel registerButtonsPanel;
     private Customer customer;
     private CustomerArray customerArray;
+    private HomepageController homepageController;
 
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
+        accessGUI = new AccessGUI();
         registerDataPanel = new RegisterDataPanel();
         registerButtonsPanel = new RegisterButtonsPanel();
+        accessButtonsPanel = new AccessButtonsPanel();
         customerArray = new CustomerArray();
         registerDataPanel = registerGUI.getRegisterDataPanel();
         registerButtonsPanel.listen(this);
         registerGUI.listen(this);
+        registerGUI.setVisible(true);
         registerGUI.setLocationRelativeTo(null);
-       // registerGUI.setVisible(true);
     }
 
     public RegisterGUI getRegisterGUI() {
@@ -61,32 +54,14 @@ public class CustomerRegisterController implements ActionListener, MouseListener
 
                 break;
             case "Back":
-                System.out.println("accessGUI");
-               registerGUI.dispose();
+//                accessGUI.setVisible(true);
+//                accessGUI.setLocationRelativeTo(null);
+                registerGUI.setVisible(false);
+                registerGUI.dispose();
                 break;
         }
     }
-
-    //metodo mouse listener
-    @Override
-    public void mouseClicked(MouseEvent e) {
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseReleased(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-    }
+    
 
     public static void main(String[] args) {
         new CustomerRegisterController();

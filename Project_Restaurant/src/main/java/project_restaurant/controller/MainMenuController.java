@@ -1,19 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package project_restaurant.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import project_restaurant.view.menu.MainMenuButtons;
-import project_restaurant.view.menu.MainMenuGUI;
-import project_restaurant.view.menu.NavMenuPanel;
+import project_restaurant.view.menu.*;
+import project_restaurant.view.*;
+import project_restaurant.model.*;
 
-/**
- *
- * @author valer
- */
+
 public class MainMenuController implements ActionListener {
 
     MainMenuGUI mainMenuGUI;

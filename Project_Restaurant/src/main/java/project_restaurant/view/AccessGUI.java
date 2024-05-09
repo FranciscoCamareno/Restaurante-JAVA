@@ -26,6 +26,7 @@ public class AccessGUI extends javax.swing.JFrame {
     public void listen(HomepageController homepageController){
         
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
