@@ -19,3 +19,4 @@ project_restaurant\view\RegisterButtonsPanel.class
 project_restaurant\view\AccessGUI.class
 project_restaurant\model\Food.class
 project_restaurant\model\Customer.class
+project_restaurant\controller\MainMenuController.class

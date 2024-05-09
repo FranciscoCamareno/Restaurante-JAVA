@@ -17,6 +17,14 @@ public class MainMenuGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    public MainMenuButtons getMainMenuButtons() {
+        return mainMenuButtons;
+    }
+
+    public NavMenuPanel getNavMenuPanel1() {
+        return navMenuPanel1;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,13 +42,13 @@ public class MainMenuGUI extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mainMenuButtons.setOpaque(false);
-        getContentPane().add(mainMenuButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+        getContentPane().add(mainMenuButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, -1, -1));
 
         navMenuPanel1.setOpaque(false);
         getContentPane().add(navMenuPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
