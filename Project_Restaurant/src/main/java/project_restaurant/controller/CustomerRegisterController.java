@@ -35,7 +35,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
         registerButtonsPanel.listen(this);
         registerGUI.listen(this);
         registerGUI.setLocationRelativeTo(null);
-        registerGUI.setVisible(true);
+       // registerGUI.setVisible(true);
     }
 
     public RegisterGUI getRegisterGUI() {

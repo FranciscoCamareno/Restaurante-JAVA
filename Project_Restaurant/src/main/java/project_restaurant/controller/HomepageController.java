@@ -33,10 +33,8 @@ public class HomepageController implements ActionListener {
         accessGUI.setVisible(true);
         customerLoginController = new CustomerLoginController();
         loginGUI = customerLoginController.getLoginGUI();
-        loginGUI.setVisible(false);
         customerRegisterController = new CustomerRegisterController();
         registerGUI = customerRegisterController.getRegisterGUI();
-        registerGUI.setVisible(false);
 
     }
 
@@ -51,10 +49,12 @@ public class HomepageController implements ActionListener {
             case "Sign-In":
                 System.out.println("Sign-In");
                 loginGUI.setVisible(true);
+                accessGUI.dispose();
                 break;
             case "Sign-Up":
                 System.out.println("Sign-Up");
                 registerGUI.setVisible(true);
+                accessGUI.dispose();
                 break;
         }
 
