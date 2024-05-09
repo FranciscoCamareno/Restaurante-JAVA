@@ -4,6 +4,8 @@
  */
 package project_restaurant.view.menu;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author fcama
@@ -15,6 +17,12 @@ public class NavMenuPanel extends javax.swing.JPanel {
      */
     public NavMenuPanel() {
         initComponents();
+    }
+    
+    public void listen (ActionListener controller){
+        btnAkariNav.addActionListener(controller);
+        btnExitNav.addActionListener(controller);
+        btnOrder.addActionListener(controller);
     }
 
     /**
@@ -28,6 +36,7 @@ public class NavMenuPanel extends javax.swing.JPanel {
 
         btnExitNav = new javax.swing.JButton();
         btnAkariNav = new javax.swing.JButton();
+        btnOrder = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -42,6 +51,11 @@ public class NavMenuPanel extends javax.swing.JPanel {
         btnAkariNav.setContentAreaFilled(false);
         add(btnAkariNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 130, 50));
 
+        btnOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon orden.png"))); // NOI18N
+        btnOrder.setActionCommand("Order");
+        btnOrder.setContentAreaFilled(false);
+        add(btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 7, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nav.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
     }// </editor-fold>//GEN-END:initComponents
@@ -50,6 +64,7 @@ public class NavMenuPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAkariNav;
     private javax.swing.JButton btnExitNav;
+    private javax.swing.JButton btnOrder;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

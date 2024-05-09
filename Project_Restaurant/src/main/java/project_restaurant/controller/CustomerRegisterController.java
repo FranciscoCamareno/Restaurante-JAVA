@@ -24,7 +24,6 @@ public class CustomerRegisterController implements ActionListener, MouseListener
     private RegisterButtonsPanel registerButtonsPanel;
     private Customer customer;
     private CustomerArray customerArray;
-    private CustomerJSON customerJSON;
 
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
@@ -62,6 +61,7 @@ public class CustomerRegisterController implements ActionListener, MouseListener
 
                 break;
             case "Back":
+                System.out.println("accessGUI");
                registerGUI.dispose();
                 break;
         }

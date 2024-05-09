@@ -8,17 +8,13 @@ package project_restaurant.view.menu;
  *
  * @author fcama
  */
-public class DessertsMenuGUI extends javax.swing.JFrame {
+public class OrderGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form DessertsMenuGUI
+     * Creates new form OrderGUI
      */
-    public DessertsMenuGUI() {
+    public OrderGUI() {
         initComponents();
-    }
-    
-    public NavMenuPanel getNavMenuPanel(){
-        return navMenuPanel;
     }
 
     /**
@@ -31,13 +27,17 @@ public class DessertsMenuGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
+        orderButtonsPanel = new project_restaurant.view.menu.OrderButtonsPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         navMenuPanel.setOpaque(false);
-        getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 6, -1, -1));
+        getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 5, -1, -1));
+
+        orderButtonsPanel.setOpaque(false);
+        getContentPane().add(orderButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 760, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
@@ -49,9 +49,9 @@ public class DessertsMenuGUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
+    private project_restaurant.view.menu.OrderButtonsPanel orderButtonsPanel;
     // End of variables declaration//GEN-END:variables
 }
