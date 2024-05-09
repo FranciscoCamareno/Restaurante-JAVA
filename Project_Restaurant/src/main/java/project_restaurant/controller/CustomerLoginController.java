@@ -27,10 +27,12 @@ public class CustomerLoginController implements ActionListener, MouseListener{
         loginDataPanel = new LoginDataPanel();
         loginButtonsPanel = new LoginButtonsPanel();
         loginGUI.setLocationRelativeTo(null);
-        loginGUI.setVisible(true);
+       // loginGUI.setVisible(true);
     }
-    
-    
+
+    public LoginGUI getLoginGUI() {
+        return loginGUI;
+    }
     
     
     //metodos action listener
