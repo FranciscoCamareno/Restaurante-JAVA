@@ -4,6 +4,8 @@
  */
 package project_restaurant.view.menu;
 
+import project_restaurant.controller.MainMenuController;
+
 /**
  *
  * @author fcama
@@ -15,6 +17,13 @@ public class MainMenuButtons extends javax.swing.JPanel {
      */
     public MainMenuButtons() {
         initComponents();
+    }
+    
+    public void listen(MainMenuController mainMenuController){
+        btnAppetizer.addActionListener(mainMenuController);
+        btnDesserts.addActionListener(mainMenuController);
+        btnDrinks.addActionListener(mainMenuController);
+        btnMainCourse.addActionListener(mainMenuController);
     }
 
     /**
@@ -33,18 +42,22 @@ public class MainMenuButtons extends javax.swing.JPanel {
 
         btnAppetizer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton entradas.png"))); // NOI18N
         btnAppetizer.setActionCommand("Appetizers");
+        btnAppetizer.setBorderPainted(false);
         btnAppetizer.setContentAreaFilled(false);
 
         btnMainCourse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton principales.png"))); // NOI18N
         btnMainCourse.setActionCommand("MainCourse");
+        btnMainCourse.setBorderPainted(false);
         btnMainCourse.setContentAreaFilled(false);
 
         btnDesserts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton postres.png"))); // NOI18N
         btnDesserts.setActionCommand("Desserts");
+        btnDesserts.setBorderPainted(false);
         btnDesserts.setContentAreaFilled(false);
 
         btnDrinks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton bebidas.png"))); // NOI18N
         btnDrinks.setActionCommand("Drinks");
+        btnDrinks.setBorderPainted(false);
         btnDrinks.setContentAreaFilled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

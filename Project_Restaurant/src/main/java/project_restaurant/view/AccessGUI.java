@@ -4,6 +4,8 @@
  */
 package project_restaurant.view;
 
+import project_restaurant.controller.HomepageController;
+
 /**
  *
  * @author fcama
@@ -20,6 +22,11 @@ public class AccessGUI extends javax.swing.JFrame {
     public AccessButtonsPanel getAccessButtonsPanel() {
         return accessButtonsPanel;
     }
+    
+    public void listen(HomepageController homepageController){
+        
+    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
