@@ -4,6 +4,8 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author fcama
@@ -23,6 +25,10 @@ public class LoginGUI extends javax.swing.JFrame {
     
     public LoginDataPanel loginDataPanel(){
         return loginDataPanel;
+    }
+    
+    public void Message(String dato){
+        JOptionPane.showMessageDialog(null, dato);
     }
 
     /**

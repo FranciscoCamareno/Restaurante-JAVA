@@ -37,13 +37,21 @@ public class CustomerArray {
         return "Error al registrar el cliente";
     }
 
-    public Customer find(String idNumber) {
+    public int find(String idNumber) {
         for (int index = 0; index < customerList.size(); index++) {
             if (customerList.get(index).getIdNumber().equalsIgnoreCase(idNumber)) {
-                return customerList.get(index);
+                return index;
             }
         }
-        return null;
+        return 0;
+    }
+    
+    public boolean findPassword(int posicion, String password){
+       boolean result = false;
+       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){
+           result = true;
+       }
+       return result;
     }
 
     public void remove() {
@@ -121,10 +129,7 @@ public class CustomerArray {
         } catch (ParseException ex) {
              ex.printStackTrace();
         }
-    }
-    
-    
-    
+    }            
     
     /////////////
     public void rewriteJSON() {
