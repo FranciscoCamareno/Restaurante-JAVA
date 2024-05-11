@@ -1,6 +1,5 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
 project_restaurant\view\menu\ObjectOrderDish.class
-project_restaurant\model\SelectedFoodArray.class
 project_restaurant\view\menu\OrderTable.class
 project_restaurant\model\MenuJsonManager.class
 project_restaurant\view\menu\MainMenuButtons.class

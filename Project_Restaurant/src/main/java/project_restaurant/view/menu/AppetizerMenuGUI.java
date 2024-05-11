@@ -17,9 +17,8 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         initComponents();
     }
     
-    public NavMenuPanel getNavMenuPanel(){
-        return navMenuPanel;
-    }
+ 
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
