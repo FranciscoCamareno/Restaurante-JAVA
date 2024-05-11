@@ -14,6 +14,7 @@ public class CustomerLoginController implements ActionListener{
     private CustomerArray customerArray;
     private MainMenuController mainMenuController;
     
+    
     public CustomerLoginController() {
         loginGUI = new LoginGUI();
         customerArray = new CustomerArray();        
@@ -22,8 +23,6 @@ public class CustomerLoginController implements ActionListener{
         loginButtonsPanel.listen(this);
         loginGUI.setLocationRelativeTo(null);
         loginGUI.setVisible(true);
-        
-       // loginGUI.setVisible(true);
     }
 
     public LoginGUI getLoginGUI() {
@@ -37,26 +36,22 @@ public class CustomerLoginController implements ActionListener{
     switch(e.getActionCommand()){
             case "Log-in":                
                 
-               if(!loginDataPanel.getTxtUserNameLogin().equals("") && !loginDataPanel.getTxtPasswordLogin().equals("")){
-                   
-                   if(customerArray.findPassword(customerArray.find(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){                   
-                   mainMenuController = new MainMenuController();   
+               if(!loginDataPanel.getTxtUserNameLogin().equals("") && !loginDataPanel.getTxtPasswordLogin().equals("")){ //revisa si el campo está vacío                   
+                   if(customerArray.findPassword(customerArray.find(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){  //Revisa si la contraseña y el usuario son correctos                 
+                   mainMenuController = new MainMenuController();  //Inicializa el menú  
                    loginGUI.dispose();
                }else{
-                   loginGUI.Message("El usuario y la contraseña no coinciden");
+                   loginGUI.Message("El usuario y la contraseña no coinciden"); //Si la información del usuario no coincide manda este mensaje
                }                      
                }else{
-                   loginGUI.Message("No puede dejar ningún de los dos campos de texto vacíos ");                                                                      
-               }
-               
-                   
+                   loginGUI.Message("No puede dejar ningún de los dos campos de texto vacíos ");  //Si se deja algún campo vacío pone este mensaje                                                                 
+               }                                  
                 break;
             case "Back":
-                System.exit(0);
+                System.exit(0); //Sale deñ programa
                 break;
         }
-    }
-    
+    }    
     
     public static void main(String[] args) {
         new CustomerLoginController();
