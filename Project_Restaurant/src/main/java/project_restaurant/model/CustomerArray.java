@@ -122,35 +122,5 @@ public class CustomerArray {
              ex.printStackTrace();
         }
     }
-    
-    
-    
-    
-    /////////////
-    public void rewriteJSON() {
-    JSONArray arrayCustomer = new JSONArray();
-    baseJSONcustomer = new JSONObject();
-
-    for (Customer customer : customerList) {
-        JSONObject objJSONcustomer = new JSONObject();
-        objJSONcustomer.put("id", customer.getIdNumber());
-        objJSONcustomer.put("UserName", customer.getUserName());
-        objJSONcustomer.put("Password", customer.getPassword());
-        objJSONcustomer.put("eMail", customer.geteMail());
-
-        arrayCustomer.add(objJSONcustomer);
-    }
-    this.baseJSONcustomer.put("CustomerList", arrayCustomer);
-
-    try {
-        FileWriter write = new FileWriter(archivoCustomer);
-        write.write(this.baseJSONcustomer.toJSONString());
-        write.flush();
-        write.close();
-    } catch (IOException ex) {
-        System.err.println("Error creating file");
-    }
-}
-
 
 }

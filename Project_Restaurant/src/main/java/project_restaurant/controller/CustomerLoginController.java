@@ -18,7 +18,7 @@ public class CustomerLoginController implements ActionListener{
         loginDataPanel = new LoginDataPanel();
         loginButtonsPanel = new LoginButtonsPanel();
         loginGUI.setLocationRelativeTo(null);
-       // loginGUI.setVisible(true);
+        loginGUI.setVisible(true);
     }
 
     public LoginGUI getLoginGUI() {
