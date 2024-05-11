@@ -37,31 +37,23 @@ public class CustomerArray {
         return "Error al registrar el cliente";
     }
 
-    public Customer find(String idNumber) {
-        for (int index = 0; index < customerList.size(); index++) {
-            if (customerList.get(index).getIdNumber().equalsIgnoreCase(idNumber)) {
-                return customerList.get(index);
-            }
-        }
-        return null;
-    }
-    
-    public int reFind(String idNumber) {
-        for (int index = 0; index < customerList.size(); index++) {
-            if (customerList.get(index).getIdNumber().equalsIgnoreCase(idNumber)) {
+    public int find(String idNumber) {        
+        for (int index = 0; index < customerList.size(); index++) {                       
+            if (customerList.get(index).getUserName().equalsIgnoreCase(idNumber)) {               
                 return index;
+                
             }
-        }
-        return 0;
+        }             
+        return -1;
     }
     
     public boolean findPassword(int posicion, String password){
-       boolean result = false;
-       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){
+       boolean result = false;      
+       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){           
            result = true;
-       }
+       }      
        return result;
-    }
+    }       
 
     public void remove() {
         customerList.remove(posicion);
@@ -138,6 +130,33 @@ public class CustomerArray {
         } catch (ParseException ex) {
              ex.printStackTrace();
         }
+    }            
+    
+    /////////////
+    public void rewriteJSON() {
+    JSONArray arrayCustomer = new JSONArray();
+    baseJSONcustomer = new JSONObject();
+
+    for (Customer customer : customerList) {
+        JSONObject objJSONcustomer = new JSONObject();
+        objJSONcustomer.put("id", customer.getIdNumber());
+        objJSONcustomer.put("UserName", customer.getUserName());
+        objJSONcustomer.put("Password", customer.getPassword());
+        objJSONcustomer.put("eMail", customer.geteMail());
+
+        arrayCustomer.add(objJSONcustomer);
     }
+    this.baseJSONcustomer.put("CustomerList", arrayCustomer);
+
+    try {
+        FileWriter write = new FileWriter(archivoCustomer);
+        write.write(this.baseJSONcustomer.toJSONString());
+        write.flush();
+        write.close();
+    } catch (IOException ex) {
+        System.err.println("Error creating file");
+    }
+}
+
 
 }
