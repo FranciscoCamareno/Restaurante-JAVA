@@ -16,6 +16,9 @@ public class ObjectDishPanel extends javax.swing.JPanel {
     public ObjectDishPanel() {
         initComponents();
     }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

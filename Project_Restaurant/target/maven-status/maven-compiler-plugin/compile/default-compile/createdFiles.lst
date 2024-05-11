@@ -1,6 +1,7 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
 project_restaurant\view\menu\ObjectOrderDish.class
 project_restaurant\model\SelectedFoodArray.class
+project_restaurant\view\menu\OrderTable.class
 project_restaurant\model\MenuJsonManager.class
 project_restaurant\view\menu\MainMenuButtons.class
 project_restaurant\view\LoginButtonsPanel.class
@@ -16,6 +17,7 @@ project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\view\LoginButtonsPanel$1.class
 project_restaurant\view\menu\NavMenuPanel.class
+project_restaurant\view\menu\OrderTable$1.class
 project_restaurant\view\menu\DessertsMenuGUI.class
 project_restaurant\model\CustomerArray.class
 project_restaurant\controller\CustomerLoginController.class

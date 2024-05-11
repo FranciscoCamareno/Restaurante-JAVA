@@ -4,6 +4,9 @@
  */
 package project_restaurant.view.menu;
 
+import javax.swing.JLabel;
+import javax.swing.JSpinner;
+
 /**
  *
  * @author fcama
@@ -15,6 +18,30 @@ public class ObjectOrderDish extends javax.swing.JPanel {
      */
     public ObjectOrderDish() {
         initComponents();
+    }
+
+    public JSpinner getJsAmount() {
+        return jsAmount;
+    }
+
+    public void setJsAmount(JSpinner jsAmount) {
+        this.jsAmount = jsAmount;
+    }
+
+    public JLabel getLblNameDish() {
+        return lblNameDish;
+    }
+
+    public void setLblNameDish(JLabel lblNameDish) {
+        this.lblNameDish = lblNameDish;
+    }
+
+    public JLabel getLblPriceDish() {
+        return lblPriceDish;
+    }
+
+    public void setLblPriceDish(JLabel lblPriceDish) {
+        this.lblPriceDish = lblPriceDish;
     }
     
     
