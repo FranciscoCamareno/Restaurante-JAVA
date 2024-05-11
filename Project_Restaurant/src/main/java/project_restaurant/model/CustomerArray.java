@@ -45,6 +45,14 @@ public class CustomerArray {
         }
         return null;
     }
+    
+    public boolean findPassword(int posicion, String password){
+       boolean result = false;
+       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){
+           result = true;
+       }
+       return result;
+    }
 
     public void remove() {
         customerList.remove(posicion);
