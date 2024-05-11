@@ -46,6 +46,15 @@ public class CustomerArray {
         return null;
     }
     
+    public int reFind(String idNumber) {
+        for (int index = 0; index < customerList.size(); index++) {
+            if (customerList.get(index).getIdNumber().equalsIgnoreCase(idNumber)) {
+                return index;
+            }
+        }
+        return 0;
+    }
+    
     public boolean findPassword(int posicion, String password){
        boolean result = false;
        if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){

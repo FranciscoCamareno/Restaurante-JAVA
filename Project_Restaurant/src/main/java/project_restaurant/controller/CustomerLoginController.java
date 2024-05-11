@@ -37,7 +37,7 @@ public class CustomerLoginController implements ActionListener{
             case "Log-in":                
                 
                if(!loginDataPanel.getTxtUserNameLogin().equals("") && !loginDataPanel.getTxtPasswordLogin().equals("")){ //revisa si el campo está vacío                   
-                   if(customerArray.findPassword(customerArray.find(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){  //Revisa si la contraseña y el usuario son correctos                 
+                   if(customerArray.findPassword(customerArray.reFind(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){  //Revisa si la contraseña y el usuario son correctos                 
                    mainMenuController = new MainMenuController();  //Inicializa el menú  
                    loginGUI.dispose();
                }else{
