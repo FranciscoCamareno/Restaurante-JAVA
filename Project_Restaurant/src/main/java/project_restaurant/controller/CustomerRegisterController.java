@@ -18,15 +18,12 @@ public class CustomerRegisterController implements ActionListener {
 
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
-        accessGUI = new AccessGUI();
-        registerDataPanel = new RegisterDataPanel();
-        registerButtonsPanel = new RegisterButtonsPanel();
-        accessButtonsPanel = new AccessButtonsPanel();
-        customerArray = new CustomerArray();
         registerDataPanel = registerGUI.getRegisterDataPanel();
+        registerButtonsPanel = registerGUI.getRegisterButtonsPanel();
+        customerArray = new CustomerArray();
         registerButtonsPanel.listen(this);
         registerGUI.listen(this);
-        registerGUI.setVisible(true);
+        //registerGUI.setVisible(true);
         registerGUI.setLocationRelativeTo(null);
     }
 
@@ -39,6 +36,7 @@ public class CustomerRegisterController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Sign-Up":
+                System.out.println("prueba");
                 String idNumber = "1";
                 String userName = registerDataPanel.getTxtUserNameRegister(); // Obteniendo el texto del campo de nombre de usuario
                 String eMail = registerDataPanel.getTxtEmail(); // Obteniendo el texto del campo de correo electrónico
@@ -54,9 +52,13 @@ public class CustomerRegisterController implements ActionListener {
 
                 break;
             case "Back":
-//                accessGUI.setVisible(true);
+                //homepageController.getAccessGUI();
+                System.out.println("back");
+                //accessGUI.setVisible(true);
 //                accessGUI.setLocationRelativeTo(null);
-                registerGUI.setVisible(false);
+                //registerGUI.setVisible(false);
+                //System.out.println("back");
+//                accessGUI.setVisible(true);
                 registerGUI.dispose();
                 break;
         }

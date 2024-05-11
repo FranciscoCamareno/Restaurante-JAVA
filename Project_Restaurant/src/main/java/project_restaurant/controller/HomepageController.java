@@ -27,8 +27,9 @@ public class HomepageController implements ActionListener {
         loginGUI = customerLoginController.getLoginGUI();
         customerRegisterController = new CustomerRegisterController();
         registerGUI = customerRegisterController.getRegisterGUI();
+        accessGUI.setLocationRelativeTo(null);
         accessGUI.setVisible(true);
-
+        
     }
 
     public AccessGUI getAccessGUI() {
@@ -49,7 +50,8 @@ public class HomepageController implements ActionListener {
                 System.out.println("Sign-Up");
                 registerGUI.setLocationRelativeTo(null);
                 registerGUI.setVisible(true);
-                accessGUI.dispose();
+                //accessGUI.dispose();
+                //accessGUI.setVisible(false);
                 break;
         }
 
