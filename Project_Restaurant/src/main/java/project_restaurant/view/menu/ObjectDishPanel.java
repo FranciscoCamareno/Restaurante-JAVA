@@ -28,34 +28,22 @@ public class ObjectDishPanel extends javax.swing.JPanel {
 
         btnBuy = new javax.swing.JButton();
         btnDetails = new javax.swing.JButton();
-        lblNameDish = new javax.swing.JLabel();
-        lblPriceDish = new javax.swing.JLabel();
-        lblTypeDish = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBuy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton compra.png"))); // NOI18N
         btnBuy.setActionCommand("buy");
+        btnBuy.setBorderPainted(false);
         btnBuy.setContentAreaFilled(false);
         add(btnBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, -1));
 
         btnDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton detalles.png"))); // NOI18N
         btnDetails.setActionCommand("details");
+        btnDetails.setBorderPainted(false);
         btnDetails.setContentAreaFilled(false);
         add(btnDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, -1, -1));
-
-        lblNameDish.setForeground(new java.awt.Color(51, 51, 51));
-        lblNameDish.setText("Name");
-        add(lblNameDish, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 170, -1));
-
-        lblPriceDish.setForeground(new java.awt.Color(51, 51, 51));
-        lblPriceDish.setText("Price");
-        add(lblPriceDish, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 170, -1));
-
-        lblTypeDish.setForeground(new java.awt.Color(51, 51, 51));
-        lblTypeDish.setText("Type");
-        add(lblTypeDish, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 180, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/objPlatillo.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 454, -1));
@@ -66,8 +54,5 @@ public class ObjectDishPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBuy;
     private javax.swing.JButton btnDetails;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel lblNameDish;
-    private javax.swing.JLabel lblPriceDish;
-    private javax.swing.JLabel lblTypeDish;
     // End of variables declaration//GEN-END:variables
 }
