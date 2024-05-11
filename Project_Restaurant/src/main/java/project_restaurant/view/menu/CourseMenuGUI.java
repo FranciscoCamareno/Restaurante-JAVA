@@ -43,9 +43,9 @@ public class CourseMenuGUI extends javax.swing.JFrame {
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        objectDishPanel1 = new project_restaurant.view.menu.ObjectDishPanel();
-        objectDishPanel2 = new project_restaurant.view.menu.ObjectDishPanel();
-        objectDishPanel3 = new project_restaurant.view.menu.ObjectDishPanel();
+        Sushi = new project_restaurant.view.menu.ObjectDishPanel();
+        Ramen = new project_restaurant.view.menu.ObjectDishPanel();
+        Teriyaki = new project_restaurant.view.menu.ObjectDishPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -105,9 +105,9 @@ public class CourseMenuGUI extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ramen.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 220, 190));
-        getContentPane().add(objectDishPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
-        getContentPane().add(objectDishPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
-        getContentPane().add(objectDishPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, 210));
+        getContentPane().add(Sushi, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        getContentPane().add(Ramen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
+        getContentPane().add(Teriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, 210));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -120,6 +120,9 @@ public class CourseMenuGUI extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private project_restaurant.view.menu.ObjectDishPanel Ramen;
+    private project_restaurant.view.menu.ObjectDishPanel Sushi;
+    private project_restaurant.view.menu.ObjectDishPanel Teriyaki;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -134,8 +137,5 @@ public class CourseMenuGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel1;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel2;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel3;
     // End of variables declaration//GEN-END:variables
 }

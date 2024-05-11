@@ -4,6 +4,8 @@
  */
 package project_restaurant.view.menu;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author fcama
@@ -15,6 +17,10 @@ public class OrderButtonsPanel extends javax.swing.JPanel {
      */
     public OrderButtonsPanel() {
         initComponents();
+    }
+    
+    public void listen(ActionListener mainMenuGUI){
+        btnBuy.addActionListener(mainMenuGUI);
     }
 
     /**
@@ -32,6 +38,7 @@ public class OrderButtonsPanel extends javax.swing.JPanel {
 
         btnBuy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buy bottom en.png"))); // NOI18N
         btnBuy.setActionCommand("Buy");
+        btnBuy.setBorderPainted(false);
         btnBuy.setContentAreaFilled(false);
         add(btnBuy, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
