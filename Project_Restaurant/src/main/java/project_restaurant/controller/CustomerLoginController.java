@@ -37,8 +37,8 @@ public class CustomerLoginController implements ActionListener{
             case "Log-in":                
                 
                if(!loginDataPanel.getTxtUserNameLogin().equals("") && !loginDataPanel.getTxtPasswordLogin().equals("")){ //revisa si el campo está vacío                   
-                   if(customerArray.findPassword(customerArray.find(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){  //Revisa si la contraseña y el usuario son correctos                 
-                   mainMenuController = new MainMenuController();  //Inicializa el menú  
+                   if(customerArray.findPassword(customerArray.find(loginDataPanel.getTxtUserNameLogin()), loginDataPanel.getTxtPasswordLogin())){  //Revisa si la contraseña y el usuario son correctos                                    
+                       mainMenuController = new MainMenuController();  //Inicializa el menú  
                    loginGUI.dispose();
                }else{
                    loginGUI.Message("El usuario y la contraseña no coinciden"); //Si la información del usuario no coincide manda este mensaje
@@ -48,7 +48,7 @@ public class CustomerLoginController implements ActionListener{
                }                                  
                 break;
             case "Back":
-                System.exit(0); //Sale deñ programa
+                System.exit(0); //Sale del programa
                 break;
         }
     }    

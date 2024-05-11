@@ -37,22 +37,23 @@ public class CustomerArray {
         return "Error al registrar el cliente";
     }
 
-    public int find(String idNumber) {
-        for (int index = 0; index < customerList.size(); index++) {
-            if (customerList.get(index).getIdNumber().equalsIgnoreCase(idNumber)) {
+    public int find(String idNumber) {        
+        for (int index = 0; index < customerList.size(); index++) {                       
+            if (customerList.get(index).getUserName().equalsIgnoreCase(idNumber)) {               
                 return index;
+                
             }
-        }
-        return 0;
+        }             
+        return -1;
     }
     
     public boolean findPassword(int posicion, String password){
-       boolean result = false;
-       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){
+       boolean result = false;      
+       if(customerList.get(posicion).getPassword().equalsIgnoreCase(password)){           
            result = true;
-       }
+       }      
        return result;
-    }
+    }       
 
     public void remove() {
         customerList.remove(posicion);
