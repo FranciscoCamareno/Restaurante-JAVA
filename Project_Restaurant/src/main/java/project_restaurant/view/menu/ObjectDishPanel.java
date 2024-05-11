@@ -4,6 +4,8 @@
  */
 package project_restaurant.view.menu;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author fcama
@@ -16,7 +18,12 @@ public class ObjectDishPanel extends javax.swing.JPanel {
     public ObjectDishPanel() {
         initComponents();
     }
-
+    
+    public void listen(ActionListener purchaseOrderController){
+        btnBuy.addActionListener(purchaseOrderController);
+        btnDetails.addActionListener(purchaseOrderController);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
