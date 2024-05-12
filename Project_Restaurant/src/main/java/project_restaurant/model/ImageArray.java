@@ -21,9 +21,9 @@ public class ImageArray {
 
     public void fillArray() {
 
-        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/agedashi-tofu.png")));
-        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/karaage.png")));
-        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/matcha parfait.png")));
+        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/AgedashiTofuConInfo.png")));
+        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/KaarageConInfo.png")));
+        imageArray.add(new Image(0, 0, new ImageIcon("./src/main/resources/img/MatchaParfeitConInfo.png")));
     }
 
     public int getImageArraySize() {
