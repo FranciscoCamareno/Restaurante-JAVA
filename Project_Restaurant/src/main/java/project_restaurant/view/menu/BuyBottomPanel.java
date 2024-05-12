@@ -45,7 +45,7 @@ public class BuyBottomPanel extends javax.swing.JPanel {
         btnAddCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton compra.png"))); // NOI18N
         btnAddCarrito.setActionCommand("AddCarrito");
         btnAddCarrito.setContentAreaFilled(false);
-        add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 

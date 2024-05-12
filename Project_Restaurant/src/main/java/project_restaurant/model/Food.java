@@ -84,10 +84,7 @@ public class Food {
         return "Food{"
                 + "idNumber='" + idNumber + '\''
                 + ", name='" + name + '\''
-                + ", description='" + description + '\''
-                + ", price=" + price
-                + ", category='" + category + '\''
-                 + ", Precio" + prices + '\''
+                + ", Precio" + prices + '\''
                 + '}';
     }
 }
