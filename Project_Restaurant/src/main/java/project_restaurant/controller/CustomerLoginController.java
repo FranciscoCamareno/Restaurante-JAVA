@@ -15,10 +15,10 @@ public class CustomerLoginController implements ActionListener{
     
     public CustomerLoginController() {
         loginGUI = new LoginGUI();
-        loginDataPanel = new LoginDataPanel();
-        loginButtonsPanel = new LoginButtonsPanel();
+        loginDataPanel = loginGUI.loginDataPanel();
+        loginButtonsPanel = loginGUI.loginButtonsPanel();
         loginGUI.setLocationRelativeTo(null);
-       // loginGUI.setVisible(true);
+        loginButtonsPanel.listen(this);     
     }
 
     public LoginGUI getLoginGUI() {
@@ -31,8 +31,11 @@ public class CustomerLoginController implements ActionListener{
     public void actionPerformed(ActionEvent e) {
     switch(e.getActionCommand()){
             case "Log-in":
+                System.out.println("ah");
                 break;
             case "Back":
+                System.out.println("00h");
+                loginGUI.dispose();
                 break;
         }
     }

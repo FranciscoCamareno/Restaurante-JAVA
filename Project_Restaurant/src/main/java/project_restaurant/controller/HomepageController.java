@@ -44,7 +44,7 @@ public class HomepageController implements ActionListener {
                 System.out.println("Sign-In");
                 loginGUI.setLocationRelativeTo(null);
                 loginGUI.setVisible(true);
-                accessGUI.dispose();
+//                accessGUI.dispose();
                 break;
             case "Sign-Up":
                 System.out.println("Sign-Up");

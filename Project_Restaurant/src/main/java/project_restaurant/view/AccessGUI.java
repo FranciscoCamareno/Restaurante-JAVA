@@ -47,7 +47,7 @@ public class AccessGUI extends javax.swing.JFrame {
         getContentPane().add(accessButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, -1, -1));
 
         access_fondo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/access fondo.png"))); // NOI18N
-        getContentPane().add(access_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 480, -1));
+        getContentPane().add(access_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

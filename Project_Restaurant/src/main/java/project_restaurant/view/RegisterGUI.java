@@ -58,7 +58,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         getContentPane().add(registerDataPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 390, 430));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo rojo base.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
