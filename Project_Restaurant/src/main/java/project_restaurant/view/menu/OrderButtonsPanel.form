@@ -24,6 +24,7 @@
           <Image iconType="3" name="/img/buy bottom en.png"/>
         </Property>
         <Property name="actionCommand" type="java.lang.String" value="Buy"/>
+        <Property name="borderPainted" type="boolean" value="false"/>
         <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Constraints>

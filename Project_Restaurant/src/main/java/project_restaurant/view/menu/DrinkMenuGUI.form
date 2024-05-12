@@ -205,21 +205,21 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="objectDishPanel1">
+    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="Sake">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="10" y="60" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="objectDishPanel2">
+    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="GreenTea">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="10" y="270" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="objectDishPanel3">
+    <Component class="project_restaurant.view.menu.ObjectDishPanel" name="Hojicha">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="10" y="480" width="-1" height="-1"/>

@@ -42,9 +42,9 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
-        objectDishPanel1 = new project_restaurant.view.menu.ObjectDishPanel();
-        objectDishPanel2 = new project_restaurant.view.menu.ObjectDishPanel();
-        objectDishPanel3 = new project_restaurant.view.menu.ObjectDishPanel();
+        Sake = new project_restaurant.view.menu.ObjectDishPanel();
+        GreenTea = new project_restaurant.view.menu.ObjectDishPanel();
+        Hojicha = new project_restaurant.view.menu.ObjectDishPanel();
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -104,9 +104,9 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(102, 102, 102));
         jLabel19.setText("H3");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, -1, -1));
-        getContentPane().add(objectDishPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
-        getContentPane().add(objectDishPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
-        getContentPane().add(objectDishPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
+        getContentPane().add(Sake, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        getContentPane().add(GreenTea, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        getContentPane().add(Hojicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
         getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
@@ -121,6 +121,9 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private project_restaurant.view.menu.ObjectDishPanel GreenTea;
+    private project_restaurant.view.menu.ObjectDishPanel Hojicha;
+    private project_restaurant.view.menu.ObjectDishPanel Sake;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -135,8 +138,5 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel1;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel2;
-    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel3;
     // End of variables declaration//GEN-END:variables
 }
