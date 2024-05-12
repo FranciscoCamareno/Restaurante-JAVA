@@ -10,15 +10,17 @@ import java.awt.event.ActionListener;
  *
  * @author fcama
  */
-public class ObjectDishPanel extends javax.swing.JPanel {
+public class BuyBottomPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ObjectDishPanel
+     * Creates new form BuyBottomPanel
      */
-    public ObjectDishPanel() {
+    public BuyBottomPanel() {
         initComponents();
     }
-    
+    public void listen (ActionListener controller){
+        btnAddCarrito.addActionListener(controller);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,17 +31,18 @@ public class ObjectDishPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        btnAddCarrito = new javax.swing.JButton();
 
-        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/objPlatillo.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 454, -1));
+        btnAddCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton compra.png"))); // NOI18N
+        btnAddCarrito.setActionCommand("AddCarrito");
+        btnAddCarrito.setContentAreaFilled(false);
+        add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnAddCarrito;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,16 +28,16 @@ public class OrderGUI extends javax.swing.JFrame {
 
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
         orderButtonsPanel = new project_restaurant.view.menu.OrderButtonsPanel();
+        orderTable1 = new project_restaurant.view.menu.OrderTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        navMenuPanel.setOpaque(false);
         getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 5, -1, -1));
 
         orderButtonsPanel.setOpaque(false);
         getContentPane().add(orderButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 760, -1, -1));
+        getContentPane().add(orderTable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
@@ -53,5 +53,6 @@ public class OrderGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
     private project_restaurant.view.menu.OrderButtonsPanel orderButtonsPanel;
+    private project_restaurant.view.menu.OrderTable orderTable1;
     // End of variables declaration//GEN-END:variables
 }
