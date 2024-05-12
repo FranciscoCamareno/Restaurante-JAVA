@@ -18,6 +18,7 @@ project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\view\LoginButtonsPanel$1.class
 project_restaurant\controller\CarouselController.class
+project_restaurant\view\menu\AppetizerMenuGUI$2.class
 project_restaurant\view\menu\NavMenuPanel.class
 project_restaurant\view\menu\OrderTable$1.class
 project_restaurant\view\menu\DessertsMenuGUI.class
