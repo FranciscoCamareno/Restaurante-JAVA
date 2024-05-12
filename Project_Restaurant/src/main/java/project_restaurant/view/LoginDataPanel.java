@@ -21,9 +21,13 @@ public class LoginDataPanel extends javax.swing.JPanel {
     }
     
     //METODOS SET Y GET
-    public JPasswordField getTxtPasswordLogin() {
-        return txtPasswordLogin;
-    }
+    
+    public String getTxtPasswordLogin() {
+    String contraseña="";
+    char[] passwordChars = txtPasswordLogin.getPassword();
+    contraseña=new String(passwordChars);
+    return contraseña;
+}
 
     public void setTxtPasswordLogin(JPasswordField txtPasswordLogin) {
         this.txtPasswordLogin = txtPasswordLogin;

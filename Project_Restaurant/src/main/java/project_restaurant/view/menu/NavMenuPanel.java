@@ -39,20 +39,24 @@ public class NavMenuPanel extends javax.swing.JPanel {
         btnOrder = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setOpaque(false);
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnExitNav.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/x bottom.png"))); // NOI18N
         btnExitNav.setActionCommand("X");
+        btnExitNav.setBorderPainted(false);
         btnExitNav.setContentAreaFilled(false);
         add(btnExitNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, 40, 40));
 
         btnAkariNav.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/font akari.png"))); // NOI18N
         btnAkariNav.setActionCommand("Akari");
+        btnAkariNav.setBorderPainted(false);
         btnAkariNav.setContentAreaFilled(false);
         add(btnAkariNav, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 130, 50));
 
         btnOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon orden.png"))); // NOI18N
         btnOrder.setActionCommand("Order");
+        btnOrder.setBorderPainted(false);
         btnOrder.setContentAreaFilled(false);
         add(btnOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 7, -1, -1));
 

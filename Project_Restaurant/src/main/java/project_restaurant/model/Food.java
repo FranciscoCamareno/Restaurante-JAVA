@@ -9,6 +9,7 @@ public class Food {
     private String name;
     private String description;
     private double price;
+    private String prices;
     private String category;
     private String imagePath;
 
@@ -22,6 +23,13 @@ public class Food {
         this.price = price;
         this.category = category;
     }
+
+    public Food(String name, String prices) {
+        this.name = name;
+        this.prices = prices;
+    }
+    
+    
 
     public String getIdNumber() {
         return idNumber;
@@ -76,10 +84,7 @@ public class Food {
         return "Food{"
                 + "idNumber='" + idNumber + '\''
                 + ", name='" + name + '\''
-                + ", description='" + description + '\''
-                + ", price=" + price
-                + ", category='" + category + '\''
-                + ", imagePath='" + imagePath + '\''
+                + ", Precio" + prices + '\''
                 + '}';
     }
 }

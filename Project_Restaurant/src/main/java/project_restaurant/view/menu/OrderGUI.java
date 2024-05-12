@@ -17,6 +17,14 @@ public class OrderGUI extends javax.swing.JFrame {
         initComponents();
     }
 
+    public NavMenuPanel getNavMenuPanel() {
+        return navMenuPanel;
+    }
+
+    public OrderButtonsPanel getOrderButtonsPanel() {
+        return orderButtonsPanel;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,15 +40,13 @@ public class OrderGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        navMenuPanel.setOpaque(false);
-        getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 5, -1, -1));
+        getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         orderButtonsPanel.setOpaque(false);
         getContentPane().add(orderButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 760, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 840));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

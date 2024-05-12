@@ -4,16 +4,21 @@
  */
 package project_restaurant.view.menu;
 
+import java.awt.Graphics;
+import project_restaurant.controller.MainMenuController;
+
 /**
  *
  * @author fcama
  */
 public class MainMenuGUI extends javax.swing.JFrame {
 
+    MainMenuController mainMenuController;
     /**
      * Creates new form MainMenu
      */
-    public MainMenuGUI() {
+    public MainMenuGUI(MainMenuController mainMenuController) {
+        this.mainMenuController = mainMenuController;
         initComponents();
     }
 
@@ -23,6 +28,11 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
     public NavMenuPanel getNavMenuPanel1() {
         return navMenuPanel1;
+    }
+    
+    public void paint(Graphics g){
+        super.paint(g);
+        mainMenuController.draw(g);
     }
 
     /**
@@ -36,19 +46,19 @@ public class MainMenuGUI extends javax.swing.JFrame {
 
         mainMenuButtons = new project_restaurant.view.menu.MainMenuButtons();
         navMenuPanel1 = new project_restaurant.view.menu.NavMenuPanel();
+        objectDishPanel1 = new project_restaurant.view.menu.ObjectDishPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mainMenuButtons.setOpaque(false);
-        getContentPane().add(mainMenuButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, -1, -1));
-
-        navMenuPanel1.setOpaque(false);
+        getContentPane().add(mainMenuButtons, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
         getContentPane().add(navMenuPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(objectDishPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -61,5 +71,6 @@ public class MainMenuGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private project_restaurant.view.menu.MainMenuButtons mainMenuButtons;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel1;
+    private project_restaurant.view.menu.ObjectDishPanel objectDishPanel1;
     // End of variables declaration//GEN-END:variables
 }
