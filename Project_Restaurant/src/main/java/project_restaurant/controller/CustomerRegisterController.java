@@ -52,13 +52,8 @@ public class CustomerRegisterController implements ActionListener {
 
                 break;
             case "Back":
-                //homepageController.getAccessGUI();
                 System.out.println("back");
-                //accessGUI.setVisible(true);
-//                accessGUI.setLocationRelativeTo(null);
-                //registerGUI.setVisible(false);
-                //System.out.println("back");
-//                accessGUI.setVisible(true);
+                accessGUI.setVisible(true);
                 registerGUI.dispose();
                 break;
         }

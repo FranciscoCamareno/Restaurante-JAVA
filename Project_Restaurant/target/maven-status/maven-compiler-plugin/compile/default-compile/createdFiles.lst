@@ -1,5 +1,7 @@
 project_restaurant\view\menu\AppetizerMenuGUI.class
-project_restaurant\view\menu\ObjectOrderDish.class
+project_restaurant\view\menu\AppetizerMenuGUI$3.class
+project_restaurant\view\menu\AppetizerMenuGUI$7.class
+project_restaurant\view\menu\CourseMenuGUI$2.class
 project_restaurant\view\menu\OrderTable.class
 project_restaurant\model\MenuJsonManager.class
 project_restaurant\view\menu\MainMenuButtons.class
@@ -7,13 +9,17 @@ project_restaurant\view\LoginButtonsPanel.class
 project_restaurant\view\menu\CourseMenuGUI.class
 project_restaurant\view\LoginGUI.class
 project_restaurant\view\RegisterButtonsPanel.class
+project_restaurant\view\menu\AppetizerMenuGUI$4.class
 project_restaurant\view\AccessGUI.class
 project_restaurant\view\menu\AppetizerMenuGUI$1.class
+project_restaurant\view\menu\CourseMenuGUI$3.class
 project_restaurant\model\Food.class
 project_restaurant\model\Customer.class
 project_restaurant\view\menu\ObjectDishPanel.class
+project_restaurant\view\menu\CourseMenuGUI$1.class
 project_restaurant\controller\HomepageController.class
 project_restaurant\model\ImageArray.class
+project_restaurant\view\menu\AppetizerMenuGUI$5.class
 project_restaurant\view\AccessButtonsPanel.class
 project_restaurant\view\menu\MainMenuGUI.class
 project_restaurant\view\LoginButtonsPanel$1.class
@@ -37,3 +43,4 @@ project_restaurant\controller\MainMenuController.class
 project_restaurant\model\NodeFood.class
 project_restaurant\model\Image.class
 project_restaurant\controller\PurchaseOrderController.class
+project_restaurant\view\menu\AppetizerMenuGUI$6.class

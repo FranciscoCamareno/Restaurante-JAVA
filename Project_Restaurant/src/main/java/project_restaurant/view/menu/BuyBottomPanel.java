@@ -5,6 +5,7 @@
 package project_restaurant.view.menu;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 
 /**
  *
@@ -21,7 +22,13 @@ public class BuyBottomPanel extends javax.swing.JPanel {
     public void listen (ActionListener controller){
         btnAddCarrito.addActionListener(controller);
     }
-
+    
+    public void mouseListen (MouseListener listen){
+        btnAddCarrito.addMouseListener(listen);
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,7 +45,7 @@ public class BuyBottomPanel extends javax.swing.JPanel {
         btnAddCarrito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton compra.png"))); // NOI18N
         btnAddCarrito.setActionCommand("AddCarrito");
         btnAddCarrito.setContentAreaFilled(false);
-        add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        add(btnAddCarrito, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
