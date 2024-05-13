@@ -4,6 +4,7 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JOptionPane;
 import project_restaurant.controller.CustomerRegisterController;
 
 /**
@@ -33,7 +34,9 @@ public class RegisterGUI extends javax.swing.JFrame {
         registerButtonsPanel.listen(controller);
     }
     
-    
+    public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

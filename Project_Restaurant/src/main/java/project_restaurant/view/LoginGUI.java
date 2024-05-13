@@ -27,8 +27,8 @@ public class LoginGUI extends javax.swing.JFrame {
         return loginDataPanel;
     }
     
-    public void Message(String dato){
-        JOptionPane.showMessageDialog(null, dato);
+    public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
     }
 
     /**

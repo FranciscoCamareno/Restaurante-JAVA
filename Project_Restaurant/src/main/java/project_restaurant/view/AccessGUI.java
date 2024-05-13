@@ -4,6 +4,7 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JOptionPane;
 import project_restaurant.controller.HomepageController;
 
 /**
@@ -26,8 +27,10 @@ public class AccessGUI extends javax.swing.JFrame {
     public void listen(HomepageController homepageController){
         
     }
-   
-
+    
+   public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

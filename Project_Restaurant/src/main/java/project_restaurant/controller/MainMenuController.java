@@ -125,8 +125,8 @@ public class MainMenuController implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        new MainMenuController();
-    }
+//    public static void main(String[] args) {
+//        new MainMenuController();
+//    }
 
 }

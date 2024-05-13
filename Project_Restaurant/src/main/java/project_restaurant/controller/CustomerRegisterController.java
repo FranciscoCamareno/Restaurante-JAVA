@@ -44,20 +44,32 @@ public class CustomerRegisterController implements ActionListener {
                 String password = registerDataPanel.getTxtPasswordRegister(); // Obteniendo el texto del campo de contraseña
 
                 if (userName.isEmpty() || eMail.isEmpty() || password.isEmpty()) {
-                    System.out.println("Por favor, rellene todos los campos antes de registrar.");
+
+                    registerGUI.showMessage("Por favor, rellene todos los campos antes de registrar.");
                 } else {
-                    customer = new Customer(idNumber, userName, password, eMail);
-                    customerArray.add(customer);
-                    System.out.println("El cliente fue registrado con éxito");
+                    registerGUI.showMessage("sipaso");
+                    if (userName.equals(customerArray.find(registerDataPanel.getTxtUserNameRegister()))) {
+                        registerGUI.showMessage("Ya existe un usuario con este nombre");
+                    } else {
+                        customer = new Customer(idNumber, userName, password, eMail);
+                        customerArray.add(customer);
+                        System.out.println("El cliente fue registrado con éxito");
+                        registerGUI.showMessage("El cliente fue registrado con éxito");
+                        registerDataPanel.setTxtUserNameRegister("");
+                        registerDataPanel.setTxtEmail("");
+                        registerDataPanel.setTxtPasswordRegister("");
+
+                    }
+
                 }
 
                 break;
             case "Back":
-                homepageController = new HomepageController();
-                accessGUI = homepageController.getAccessGUI();
-                accessGUI.setVisible(true);
+
+//                accessGUI = homepageController.getAccessGUI();
+//                accessGUI.setVisible(true);
+//                registerGUI.setVisible(false);
                 registerGUI.dispose();
-//                System.exit(0);
                 break;
         }
     }

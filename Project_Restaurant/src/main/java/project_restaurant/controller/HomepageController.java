@@ -8,12 +8,12 @@ import project_restaurant.model.*;
 
 public class HomepageController implements ActionListener {
 
-    AccessGUI accessGUI;
-    AccessButtonsPanel accessButtonsPanel;
-    RegisterGUI registerGUI;
-    LoginGUI loginGUI;
-    CustomerLoginController customerLoginController;
-    CustomerRegisterController customerRegisterController;
+    private AccessGUI accessGUI;
+    private AccessButtonsPanel accessButtonsPanel;
+    private RegisterGUI registerGUI;
+    private LoginGUI loginGUI;
+    private CustomerLoginController customerLoginController;
+    private CustomerRegisterController customerRegisterController;
 
     public HomepageController() {
         accessGUI = new AccessGUI();
@@ -46,7 +46,7 @@ public class HomepageController implements ActionListener {
                 System.out.println("Sign-Up");
                 registerGUI.setLocationRelativeTo(null);
                 registerGUI.setVisible(true);
-                accessGUI.dispose();
+//                accessGUI.dispose();
                 break;
         }
 
