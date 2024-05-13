@@ -46,11 +46,10 @@ public class CustomerRegisterController implements ActionListener {
                 if (userName.isEmpty() || eMail.isEmpty() || password.isEmpty()) {
 
                     registerGUI.showMessage("Por favor, rellene todos los campos antes de registrar.");
-                } else {
-                    registerGUI.showMessage("sipaso");
-                    if (userName.equals(customerArray.find(registerDataPanel.getTxtUserNameRegister()))) {
+                } else if (userName.equals(customerArray.find(registerDataPanel.getTxtUserNameRegister()))) {
                         registerGUI.showMessage("Ya existe un usuario con este nombre");
                     } else {
+                         registerGUI.showMessage("sipaso");
                         customer = new Customer(idNumber, userName, password, eMail);
                         customerArray.add(customer);
                         System.out.println("El cliente fue registrado con éxito");
@@ -61,7 +60,7 @@ public class CustomerRegisterController implements ActionListener {
 
                     }
 
-                }
+                
 
                 break;
             case "Back":
@@ -74,8 +73,9 @@ public class CustomerRegisterController implements ActionListener {
         }
     }
 
-//    public static void main(String[] args) {
-//        new CustomerRegisterController();
-//    }
-
+    public static void main(String[] args) {
+        new CustomerRegisterController();
+    }
 }
+
+
