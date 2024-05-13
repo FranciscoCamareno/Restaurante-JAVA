@@ -3,23 +3,83 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package project_restaurant.view.menu;
+import project_restaurant.model.*;
+
+import javax.swing.JLabel;
 
 /**
  *
  * @author fcama
  */
 public class CourseMenuGUI extends javax.swing.JFrame {
-
+    private Food food;
+    private CourseMenuGUI courseGUI;
+    private PileFood pileFood;
+    private NodeFood nodeFood;
     /**
      * Creates new form CourseMenuGUI
      */
     public CourseMenuGUI() {
         initComponents();
+        pileFood = new PileFood();
+
     }
     
     public NavMenuPanel getNavMenuPanel(){
         return navMenuPanel;
     }
+
+    public String getLblNameRamen() {
+        return "Ramen";
+    }
+
+    public void setLblNameRamen(String lblNameRamen) {
+        lblNameRamen = "Ramen";
+    }
+
+    public String getLblNameSushi() {
+        return "Sushi";
+    }
+
+    public void setLblNameSushi(String lblNameSushi) {
+        lblNameSushi = "Sushi";
+    }
+
+    public String getLblNameTeriyaki() {
+        return "Teriyaki";
+    }
+
+    public void setLblNameTeriyaki(String lblNameTeriyaki) {
+        lblNameTeriyaki = "Sushi";
+    }
+
+    public String getLblPriceRamen() {
+        return "$22";
+    }
+
+    public void setLblPriceRamen(String lblPriceRamen) {
+        lblPriceRamen = "$22";
+    }
+
+    public String getLblPriceSushi() {
+        return "$20";
+    }
+
+    public void setLblPriceSushi(String lblPriceSushi) {
+        lblPriceSushi = "$20";
+    }
+
+    public String getLblPriceTeriyaki() {
+        return "$15";
+    }
+
+    public void setLblPriceTeriyaki(String lblPriceTeriyaki) {
+        lblPriceTeriyaki = "$15";
+    }
+    
+    
+    
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,19 +90,22 @@ public class CourseMenuGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel11 = new javax.swing.JLabel();
+        lblNameTeriyaki = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lblPriceTeriyaki = new javax.swing.JLabel();
+        lblNameRamen = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblPriceRamen = new javax.swing.JLabel();
+        lblNameSushi = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        lblPriceSushi = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        buyBottomPanel1 = new project_restaurant.view.menu.BuyBottomPanel();
+        buyBottomPanel2 = new project_restaurant.view.menu.BuyBottomPanel();
+        buyBottomPanel3 = new project_restaurant.view.menu.BuyBottomPanel();
         Sushi = new project_restaurant.view.menu.ObjectDishPanel();
         Ramen = new project_restaurant.view.menu.ObjectDishPanel();
         Teriyaki = new project_restaurant.view.menu.ObjectDishPanel();
@@ -51,50 +114,50 @@ public class CourseMenuGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel11.setText("Teriyaki");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, -1, -1));
+        lblNameTeriyaki.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameTeriyaki.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameTeriyaki.setText("Teriyaki");
+        getContentPane().add(lblNameTeriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("H3");
+        jLabel12.setText("Main Course");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("$000");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 590, -1, -1));
+        lblPriceTeriyaki.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceTeriyaki.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceTeriyaki.setText("$15");
+        getContentPane().add(lblPriceTeriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 590, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel8.setText("Ramen");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
+        lblNameRamen.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameRamen.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameRamen.setText("Ramen");
+        getContentPane().add(lblNameRamen, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel9.setText("H3");
+        jLabel9.setText("Main Course");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("$000");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
+        lblPriceRamen.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceRamen.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceRamen.setText("$22");
+        getContentPane().add(lblPriceRamen, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 370, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("Sushi");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
+        lblNameSushi.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameSushi.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameSushi.setText("Sushi");
+        getContentPane().add(lblNameSushi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel6.setText("Tempura");
+        jLabel6.setText("Main Course");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel7.setText("$000");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
+        lblPriceSushi.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceSushi.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceSushi.setText("$20");
+        getContentPane().add(lblPriceSushi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/teriyaki.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 220, 190));
@@ -105,6 +168,30 @@ public class CourseMenuGUI extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ramen.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 220, 190));
+
+        buyBottomPanel1.setOpaque(false);
+        buyBottomPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
+
+        buyBottomPanel2.setOpaque(false);
+        buyBottomPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, -1, -1));
+
+        buyBottomPanel3.setOpaque(false);
+        buyBottomPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 652, -1, 50));
         getContentPane().add(Sushi, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
         getContentPane().add(Ramen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
         getContentPane().add(Teriyaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, 210));
@@ -115,6 +202,36 @@ public class CourseMenuGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void buyBottomPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel1MouseClicked
+        courseGUI = new CourseMenuGUI();
+        String name = courseGUI.getLblNameSushi();
+        String price = courseGUI.getLblPriceSushi();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());     }//GEN-LAST:event_buyBottomPanel1MouseClicked
+
+    private void buyBottomPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel2MouseClicked
+        courseGUI = new CourseMenuGUI();
+        String name = courseGUI.getLblNameRamen();
+        String price = courseGUI.getLblPriceRamen();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel2MouseClicked
+
+    private void buyBottomPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel3MouseClicked
+        courseGUI = new CourseMenuGUI();
+        String name = courseGUI.getLblNameTeriyaki();
+        String price = courseGUI.getLblPriceTeriyaki();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -123,19 +240,22 @@ public class CourseMenuGUI extends javax.swing.JFrame {
     private project_restaurant.view.menu.ObjectDishPanel Ramen;
     private project_restaurant.view.menu.ObjectDishPanel Sushi;
     private project_restaurant.view.menu.ObjectDishPanel Teriyaki;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel1;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel2;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel lblNameRamen;
+    private javax.swing.JLabel lblNameSushi;
+    private javax.swing.JLabel lblNameTeriyaki;
+    private javax.swing.JLabel lblPriceRamen;
+    private javax.swing.JLabel lblPriceSushi;
+    private javax.swing.JLabel lblPriceTeriyaki;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,22 +4,80 @@
  */
 package project_restaurant.view.menu;
 
+import javax.swing.JLabel;
+import project_restaurant.model.*;
 /**
  *
  * @author fcama
  */
 public class DrinkMenuGUI extends javax.swing.JFrame {
-
+    private Food food;
+    private DrinkMenuGUI drinkGUI;
+    private BuyBottomPanel buyBottom;
+    private PileFood pileFood;
+    private NodeFood nodeFood;
     /**
      * Creates new form DrinkMenuGUI
      */
     public DrinkMenuGUI() {
         initComponents();
+        pileFood = new PileFood();
     }
     
     public NavMenuPanel getNavMenuPanel(){
         return navMenuPanel;
     }
+
+    public String getLblNameHojicha() {
+        return "Hojicha";
+    }
+
+    public void setLblNameHojicha(String lblNameHojicha) {
+        lblNameHojicha = "Hojicha";
+    }
+
+    public String getLblNameSake() {
+        return "Sake";
+    }
+
+    public void setLblNameSake(String lblNameSake) {
+        lblNameSake = "Sake";
+    }
+
+    public String getLblNameTea() {
+        return "Green Tea";
+    }
+
+    public void setLblNameTea(String lblNameTea) {
+        lblNameTea = "Green Tea";
+    }
+
+    public String getLblPriceHojicha() {
+        return "$4";
+    }
+
+    public void setLblPriceHojicha(String lblPriceHojicha) {
+        lblPriceHojicha = "$4";
+    }
+
+    public String getLblPriceSake() {
+        return "$3";
+    }
+
+    public void setLblPriceSake(String lblPriceSake) {
+        lblPriceSake = "$3";
+    }
+
+    public String getLblPriceTea() {
+        return "$2";
+    }
+
+    public void setLblPriceTea(String lblPriceTea) {
+        lblPriceTea = "$2";
+    }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,17 +89,20 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        lblPriceSake = new javax.swing.JLabel();
+        lblNameSake = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        lblPriceTea = new javax.swing.JLabel();
+        lblNameTea = new javax.swing.JLabel();
+        lblPriceHojicha = new javax.swing.JLabel();
+        lblNameHojicha = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        buyBottomPanel1 = new project_restaurant.view.menu.BuyBottomPanel();
+        buyBottomPanel2 = new project_restaurant.view.menu.BuyBottomPanel();
+        buyBottomPanel3 = new project_restaurant.view.menu.BuyBottomPanel();
         Sake = new project_restaurant.view.menu.ObjectDishPanel();
         GreenTea = new project_restaurant.view.menu.ObjectDishPanel();
         Hojicha = new project_restaurant.view.menu.ObjectDishPanel();
@@ -53,18 +114,18 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("H3");
+        jLabel12.setText("Drink");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("$000");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
+        lblPriceSake.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceSake.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceSake.setText("$3");
+        getContentPane().add(lblPriceSake, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel11.setText("Sake");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
+        lblNameSake.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameSake.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameSake.setText("Sake");
+        getContentPane().add(lblNameSake, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hojicha.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 220, 190));
@@ -77,33 +138,57 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel14.setText("Tea");
+        jLabel14.setText("Drink");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("$000");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
+        lblPriceTea.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceTea.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceTea.setText("$2");
+        getContentPane().add(lblPriceTea, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel16.setText("Green");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
+        lblNameTea.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameTea.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameTea.setText("Green Tea");
+        getContentPane().add(lblNameTea, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel17.setText("$000");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
+        lblPriceHojicha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPriceHojicha.setForeground(new java.awt.Color(102, 102, 102));
+        lblPriceHojicha.setText("$4");
+        getContentPane().add(lblPriceHojicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 560, -1, -1));
 
-        jLabel18.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel18.setText("Hojicha");
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, -1, -1));
+        lblNameHojicha.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblNameHojicha.setForeground(new java.awt.Color(51, 51, 51));
+        lblNameHojicha.setText("Hojicha");
+        getContentPane().add(lblNameHojicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel19.setText("H3");
+        jLabel19.setText("Drink");
         getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, -1, -1));
+
+        buyBottomPanel1.setOpaque(false);
+        buyBottomPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel1MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, -1, -1));
+
+        buyBottomPanel2.setOpaque(false);
+        buyBottomPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel2MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, -1, -1));
+
+        buyBottomPanel3.setOpaque(false);
+        buyBottomPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buyBottomPanel3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(buyBottomPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, -1, -1));
         getContentPane().add(Sake, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
         getContentPane().add(GreenTea, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
         getContentPane().add(Hojicha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, -1, -1));
@@ -115,6 +200,36 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void buyBottomPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel1MouseClicked
+        drinkGUI = new DrinkMenuGUI();
+        String name = drinkGUI.getLblNameSake();
+        String price = drinkGUI.getLblPriceSake();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel1MouseClicked
+
+    private void buyBottomPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel2MouseClicked
+        drinkGUI = new DrinkMenuGUI();
+        String name = drinkGUI.getLblNameTea();
+        String price = drinkGUI.getLblPriceTea();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());     }//GEN-LAST:event_buyBottomPanel2MouseClicked
+
+    private void buyBottomPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel3MouseClicked
+        drinkGUI = new DrinkMenuGUI();
+        String name = drinkGUI.getLblNameHojicha();
+        String price = drinkGUI.getLblPriceHojicha();
+
+        food = new Food(name, price);
+        pileFood.push(food);
+        System.out.println("Platillo registrado con éxito");
+        System.out.println(pileFood.toString());     }//GEN-LAST:event_buyBottomPanel3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -124,19 +239,22 @@ public class DrinkMenuGUI extends javax.swing.JFrame {
     private project_restaurant.view.menu.ObjectDishPanel GreenTea;
     private project_restaurant.view.menu.ObjectDishPanel Hojicha;
     private project_restaurant.view.menu.ObjectDishPanel Sake;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel1;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel2;
+    private project_restaurant.view.menu.BuyBottomPanel buyBottomPanel3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel lblNameHojicha;
+    private javax.swing.JLabel lblNameSake;
+    private javax.swing.JLabel lblNameTea;
+    private javax.swing.JLabel lblPriceHojicha;
+    private javax.swing.JLabel lblPriceSake;
+    private javax.swing.JLabel lblPriceTea;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
     // End of variables declaration//GEN-END:variables
 }

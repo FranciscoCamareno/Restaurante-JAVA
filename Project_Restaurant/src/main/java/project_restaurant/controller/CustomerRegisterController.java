@@ -18,12 +18,13 @@ public class CustomerRegisterController implements ActionListener {
 
     public CustomerRegisterController() {
         registerGUI = new RegisterGUI();
+//        accessGUI = new AccessGUI();
         registerDataPanel = registerGUI.getRegisterDataPanel();
         registerButtonsPanel = registerGUI.getRegisterButtonsPanel();
         customerArray = new CustomerArray();
         registerButtonsPanel.listen(this);
         registerGUI.listen(this);
-        //registerGUI.setVisible(true);
+        registerGUI.setVisible(true);
         registerGUI.setLocationRelativeTo(null);
     }
 
@@ -52,18 +53,14 @@ public class CustomerRegisterController implements ActionListener {
 
                 break;
             case "Back":
-                //homepageController.getAccessGUI();
-                System.out.println("back");
-                //accessGUI.setVisible(true);
-//                accessGUI.setLocationRelativeTo(null);
-                //registerGUI.setVisible(false);
-                //System.out.println("back");
-//                accessGUI.setVisible(true);
+                homepageController = new HomepageController();
+                accessGUI = homepageController.getAccessGUI();
+                accessGUI.setVisible(true);
                 registerGUI.dispose();
+//                System.exit(0);
                 break;
         }
     }
-    
 
     public static void main(String[] args) {
         new CustomerRegisterController();
