@@ -74,8 +74,8 @@ public class CustomerRegisterController implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        new CustomerRegisterController();
-    }
+//    public static void main(String[] args) {
+//        new CustomerRegisterController();
+//    }
 
 }
