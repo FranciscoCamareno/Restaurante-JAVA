@@ -12,6 +12,9 @@ public class Food {
     private String prices;
     private String category;
     private String imagePath;
+    public static final String[] FOOD_LABELS = {"Name", "Price"};//etiquetas de la tabla
+    public static final int SIZE_CUSTOMER = FOOD_LABELS.length;//las etiquetas se ajustan al tamaño que requieran, o la tabla/tamaño de la tabla e ajusta digamos
+
 
     public Food() {
     }
@@ -79,6 +82,18 @@ public class Food {
         this.imagePath = imagePath;
     }
 
+    public String getData(int index) {
+
+        switch (index) {
+            case 0:
+                return name;
+
+            case 1:
+                return String.valueOf(price);
+        }
+        return null;
+    }
+    
     @Override
     public String toString() {
         return "Food{"

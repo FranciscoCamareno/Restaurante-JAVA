@@ -49,7 +49,7 @@ public class CustomerRegisterController implements ActionListener {
                 } else if (userName.equals(customerArray.find(registerDataPanel.getTxtUserNameRegister()))) {
                         registerGUI.showMessage("Ya existe un usuario con este nombre");
                     } else {
-                         registerGUI.showMessage("sipaso");
+                        //registerGUI.showMessage("sipaso");
                         customer = new Customer(idNumber, userName, password, eMail);
                         customerArray.add(customer);
                         System.out.println("El cliente fue registrado con éxito");
@@ -76,6 +76,6 @@ public class CustomerRegisterController implements ActionListener {
     public static void main(String[] args) {
         new CustomerRegisterController();
     }
-}
+    }
 
 

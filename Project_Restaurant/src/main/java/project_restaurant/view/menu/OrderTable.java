@@ -5,12 +5,18 @@
 package project_restaurant.view.menu;
 
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import project_restaurant.model.PileFood;
 
 /**
  *
  * @author fcama
  */
 public class OrderTable extends javax.swing.JPanel {
+
+    private TableRowSorter<DefaultTableModel> sorter;
+    private PileFood pileFood;
 
     /**
      * Creates new form OrderTable
@@ -26,6 +32,15 @@ public class OrderTable extends javax.swing.JPanel {
     public void setTblOrder(JTable tblOrder) {
         this.tblOrder = tblOrder;
     }
+    
+    public void setDataTable(Object[][] data) {
+    DefaultTableModel model = new DefaultTableModel(data, new String[] {"Name", "Price"});
+    tblOrder.setModel(model);
+    jScrollPane1.setViewportView(tblOrder);
+    tblOrder.setAutoCreateRowSorter(true);
+    sorter = new TableRowSorter<>(model);
+    tblOrder.setRowSorter(sorter);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
