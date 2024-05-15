@@ -15,6 +15,9 @@ public class OrderGUI extends javax.swing.JFrame {
      */
     public OrderGUI() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        
     }
 
     public NavMenuPanel getNavMenuPanel() {

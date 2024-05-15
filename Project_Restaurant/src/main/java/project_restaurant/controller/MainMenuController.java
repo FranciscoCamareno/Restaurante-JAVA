@@ -23,6 +23,7 @@ public class MainMenuController implements ActionListener {
     ImageArray imageArray;
     CarouselController carouselController;
     OrderGUI orderGUI;
+    PurchaseOrderController purchaseOrderController;
 
     public MainMenuController() {
 
@@ -57,9 +58,8 @@ public class MainMenuController implements ActionListener {
         navMenuPanel = drinkMenuGUI.getNavMenuPanel();
         navMenuPanel.listen(this);
         
-        orderGUI = new OrderGUI();
-        navMenuPanel = orderGUI.getNavMenuPanel();
-        navMenuPanel.listen(this);
+        
+        
 
     }
 
@@ -117,9 +117,7 @@ public class MainMenuController implements ActionListener {
                 break;
             case "Order":
                 System.out.println("Funciona order");
-                orderGUI.setLocationRelativeTo(null);
-                orderGUI.setVisible(true);
-                mainMenuGUI.setVisible(false);
+                purchaseOrderController = new PurchaseOrderController();
                 break;
 
         }
