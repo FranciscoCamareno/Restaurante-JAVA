@@ -16,6 +16,11 @@ public class PileFood {
         top = null;
     }
     
+     public void cleanList() {
+        length = 0;
+        top = null;
+    }
+    
     public String[][] getMatrizPileFood(){
     String[][] matrixMeals = new String[length][Food.FOOD_LABELS.length];
     NodeFood nodeFood = top;

@@ -7,6 +7,7 @@ package project_restaurant.view.menu;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import project_restaurant.model.PileFood;
+import project_restaurant.view.LoginGUI;
 
 /**
  *
@@ -17,10 +18,13 @@ public class OrderGUI extends javax.swing.JFrame {
      * Creates new form OrderGUI
      */
     private PileFood pileFood;
+    private DefaultTableModel tableModel;
+    private LoginGUI loginGUI;
     
     public OrderGUI(PileFood pileFood) { 
         this.pileFood = pileFood;
         orderTable1.setDataTable(pileFood.getMatrizPileFood());
+        this.tableModel = (DefaultTableModel) orderTable1.getTblOrder().getModel();
         initComponents();
     }
 
@@ -32,7 +36,7 @@ public class OrderGUI extends javax.swing.JFrame {
         return orderButtonsPanel;
     }
 
-    public OrderTable getOrderTable1() {
+    public OrderTable getOrderTable1() {        
         return orderTable1;
     }
     
@@ -73,7 +77,9 @@ public class OrderGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void orderButtonsPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderButtonsPanelMouseClicked
-        
+        pileFood.cleanList();
+        orderTable1.setDataTable(pileFood.getMatrizPileFood());
+        loginGUI.showMessage("¡Gracias por su compra!");
     }//GEN-LAST:event_orderButtonsPanelMouseClicked
 
     /**
