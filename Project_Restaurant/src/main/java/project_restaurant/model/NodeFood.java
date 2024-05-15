@@ -26,5 +26,20 @@ public class NodeFood {
     public void setNext(NodeFood next) {
         this.next = next;
     }
+    
+    public String getFood(int index){      
+        if(data != null){
+            switch(index){
+                case 0:                    
+                      return data.getName();
+                case 1:
+                      return String.valueOf(data.getPrice());
+                default:
+                      return "";
+            }
+        }else{
+           return "";
+        }                
+    }
 
 }

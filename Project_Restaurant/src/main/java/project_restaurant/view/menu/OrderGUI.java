@@ -6,17 +6,21 @@ package project_restaurant.view.menu;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import project_restaurant.model.PileFood;
 
 /**
  *
  * @author fcama
  */
 public class OrderGUI extends javax.swing.JFrame {
-
     /**
      * Creates new form OrderGUI
      */
-    public OrderGUI() {
+    private PileFood pileFood;
+    
+    public OrderGUI(PileFood pileFood) { 
+        this.pileFood = pileFood;
+        orderTable1.setDataTable(pileFood.getMatrizPileFood());
         initComponents();
     }
 
@@ -32,6 +36,7 @@ public class OrderGUI extends javax.swing.JFrame {
         return orderTable1;
     }
     
+  
     
 
     /**
@@ -53,6 +58,11 @@ public class OrderGUI extends javax.swing.JFrame {
         getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         orderButtonsPanel.setOpaque(false);
+        orderButtonsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                orderButtonsPanelMouseClicked(evt);
+            }
+        });
         getContentPane().add(orderButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 760, -1, -1));
         getContentPane().add(orderTable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
@@ -61,6 +71,10 @@ public class OrderGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void orderButtonsPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderButtonsPanelMouseClicked
+        
+    }//GEN-LAST:event_orderButtonsPanelMouseClicked
 
     /**
      * @param args the command line arguments

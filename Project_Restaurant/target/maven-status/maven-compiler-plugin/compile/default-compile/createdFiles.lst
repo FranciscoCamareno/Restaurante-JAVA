@@ -20,6 +20,7 @@ project_restaurant\controller\CustomerLoginController.class
 project_restaurant\controller\CustomerRegisterController.class
 project_restaurant\view\menu\DrinkMenuGUI.class
 project_restaurant\view\menu\OrderGUI.class
+project_restaurant\view\menu\OrderGUI$1.class
 project_restaurant\model\NodeFood.class
 project_restaurant\view\menu\AppetizerMenuGUI$6.class
 project_restaurant\view\menu\AppetizerMenuGUI.class

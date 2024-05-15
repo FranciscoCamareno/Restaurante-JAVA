@@ -15,6 +15,18 @@ public class PileFood {
         length = 0;
         top = null;
     }
+    
+    public String[][] getMatrizPileFood(){
+    String[][] matrixMeals = new String[length][Food.FOOD_LABELS.length];
+    NodeFood nodeFood = top;
+    for (int i = 0; i < length; i++) {
+        for (int j = 0; j < Food.FOOD_LABELS.length; j++) {                       
+            matrixMeals[i][j] = nodeFood.getFood(j);
+        }
+        nodeFood = nodeFood.getNext();
+    }
+    return matrixMeals;
+    }
 
     public void push(Food food) {
         NodeFood nodeFood = new NodeFood(food);
