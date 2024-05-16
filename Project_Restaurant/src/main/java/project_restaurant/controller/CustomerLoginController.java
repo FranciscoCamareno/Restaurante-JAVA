@@ -49,9 +49,7 @@ public class CustomerLoginController implements ActionListener{
                }                                  
                 break;
             case "Back":
-                System.out.println("uaua");
                 loginGUI.dispose();
-                
                 break;
         }
     }    
@@ -59,5 +57,5 @@ public class CustomerLoginController implements ActionListener{
 //    public static void main(String[] args) {
 //        new CustomerLoginController();
 //    }
-//    
+    
 }
