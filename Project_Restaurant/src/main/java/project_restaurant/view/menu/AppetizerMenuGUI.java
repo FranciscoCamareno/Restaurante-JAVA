@@ -6,6 +6,7 @@ package project_restaurant.view.menu;
 
 import java.awt.event.MouseListener;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import project_restaurant.model.*;
 
 /**
@@ -13,11 +14,13 @@ import project_restaurant.model.*;
  * @author fcama
  */
 public class AppetizerMenuGUI extends javax.swing.JFrame {
+
     private Food food;
     private AppetizerMenuGUI appetizerGUI;
     private BuyBottomPanel buyBottom;
     private PileFood pileFood;
     private NodeFood nodeFood;
+
     /**
      * Creates new form AppetizerMenuGUI
      */
@@ -44,7 +47,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
     }
 
     public void setLblPriceO1(String lblPriceO1) {
-        lblPriceO1 =  "$5";
+        lblPriceO1 = "$5";
     }
 
     public String getLblNameO2() {
@@ -142,10 +145,10 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
     public void setLblPriceO7(String lblPriceO7) {
         lblPriceO7 = "$8";
     }
-    
-    
-    
-    
+
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -417,6 +420,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel1MouseClicked
 
     private void buyBottomPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel2MouseClicked
@@ -427,6 +431,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel2MouseClicked
 
     private void buyBottomPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel3MouseClicked
@@ -437,6 +442,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel3MouseClicked
 
     private void buyBottomPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel4MouseClicked
@@ -447,6 +453,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel4MouseClicked
 
     private void buyBottomPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel5MouseClicked
@@ -457,6 +464,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel5MouseClicked
 
     private void buyBottomPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel6MouseClicked
@@ -467,6 +475,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel6MouseClicked
 
     private void buyBottomPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buyBottomPanel7MouseClicked
@@ -477,6 +486,7 @@ public class AppetizerMenuGUI extends javax.swing.JFrame {
         food = new Food(name, price);
         pileFood.push(food);
         System.out.println("Platillo registrado con éxito");
+        showMessage(pileFood.toString());
         System.out.println(pileFood.toString());    }//GEN-LAST:event_buyBottomPanel7MouseClicked
 
     /**

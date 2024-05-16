@@ -4,6 +4,7 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JOptionPane;
 import project_restaurant.controller.CustomerRegisterController;
 
 /**
@@ -33,7 +34,9 @@ public class RegisterGUI extends javax.swing.JFrame {
         registerButtonsPanel.listen(controller);
     }
     
-    
+    public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -58,7 +61,7 @@ public class RegisterGUI extends javax.swing.JFrame {
         getContentPane().add(registerDataPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 390, 430));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo rojo base.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

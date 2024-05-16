@@ -23,9 +23,11 @@ public class MainMenuController implements ActionListener {
     ImageArray imageArray;
     CarouselController carouselController;
     OrderGUI orderGUI;
+    PileFood pileFood;
 
     public MainMenuController() {
-
+        pileFood = new PileFood();
+        
         image = new Image();
         //image.setIcon(new ImageIcon("./src/main/resources/img/agedashi-tofu.png"));
         imageArray = new ImageArray();
@@ -57,7 +59,7 @@ public class MainMenuController implements ActionListener {
         navMenuPanel = drinkMenuGUI.getNavMenuPanel();
         navMenuPanel.listen(this);
         
-        orderGUI = new OrderGUI();
+        orderGUI = new OrderGUI(pileFood);
         navMenuPanel = orderGUI.getNavMenuPanel();
         navMenuPanel.listen(this);
 
@@ -125,8 +127,8 @@ public class MainMenuController implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        new MainMenuController();
-    }
+//    public static void main(String[] args) {
+//        new MainMenuController();
+//    }
 
 }

@@ -4,6 +4,7 @@
  */
 package project_restaurant.view;
 
+import javax.swing.JOptionPane;
 import project_restaurant.controller.HomepageController;
 
 /**
@@ -26,8 +27,10 @@ public class AccessGUI extends javax.swing.JFrame {
     public void listen(HomepageController homepageController){
         
     }
-   
-
+    
+   public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,7 +50,7 @@ public class AccessGUI extends javax.swing.JFrame {
         getContentPane().add(accessButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, -1, -1));
 
         access_fondo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/access fondo.png"))); // NOI18N
-        getContentPane().add(access_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 480, -1));
+        getContentPane().add(access_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

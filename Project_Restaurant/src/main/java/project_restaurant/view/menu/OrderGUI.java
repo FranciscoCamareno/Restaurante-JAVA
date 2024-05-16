@@ -4,16 +4,27 @@
  */
 package project_restaurant.view.menu;
 
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
+import project_restaurant.model.PileFood;
+import project_restaurant.view.LoginGUI;
+
 /**
  *
  * @author fcama
  */
 public class OrderGUI extends javax.swing.JFrame {
-
     /**
      * Creates new form OrderGUI
      */
-    public OrderGUI() {
+    private PileFood pileFood;
+    private DefaultTableModel tableModel;
+    private LoginGUI loginGUI;
+    
+    public OrderGUI(PileFood pileFood) { 
+        this.pileFood = pileFood;
+        orderTable1.setDataTable(pileFood.getMatrizPileFood());
+        this.tableModel = (DefaultTableModel) orderTable1.getTblOrder().getModel();
         initComponents();
     }
 
@@ -24,6 +35,13 @@ public class OrderGUI extends javax.swing.JFrame {
     public OrderButtonsPanel getOrderButtonsPanel() {
         return orderButtonsPanel;
     }
+
+    public OrderTable getOrderTable1() {        
+        return orderTable1;
+    }
+    
+  
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,6 +54,7 @@ public class OrderGUI extends javax.swing.JFrame {
 
         navMenuPanel = new project_restaurant.view.menu.NavMenuPanel();
         orderButtonsPanel = new project_restaurant.view.menu.OrderButtonsPanel();
+        orderTable1 = new project_restaurant.view.menu.OrderTable();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,13 +62,25 @@ public class OrderGUI extends javax.swing.JFrame {
         getContentPane().add(navMenuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         orderButtonsPanel.setOpaque(false);
+        orderButtonsPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                orderButtonsPanelMouseClicked(evt);
+            }
+        });
         getContentPane().add(orderButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 760, -1, -1));
+        getContentPane().add(orderTable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo menu.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 840));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void orderButtonsPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderButtonsPanelMouseClicked
+        pileFood.cleanList();
+        orderTable1.setDataTable(pileFood.getMatrizPileFood());
+        loginGUI.showMessage("¡Gracias por su compra!");
+    }//GEN-LAST:event_orderButtonsPanelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -59,5 +90,6 @@ public class OrderGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private project_restaurant.view.menu.NavMenuPanel navMenuPanel;
     private project_restaurant.view.menu.OrderButtonsPanel orderButtonsPanel;
+    private project_restaurant.view.menu.OrderTable orderTable1;
     // End of variables declaration//GEN-END:variables
 }

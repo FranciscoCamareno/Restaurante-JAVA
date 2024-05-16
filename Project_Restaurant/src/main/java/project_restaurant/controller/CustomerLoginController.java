@@ -8,6 +8,7 @@ import project_restaurant.model.*;
 
 public class CustomerLoginController implements ActionListener{
     
+    private RegisterGUI registerGUI;
     private LoginGUI loginGUI;
     private LoginDataPanel loginDataPanel;
     private LoginButtonsPanel loginButtonsPanel;
@@ -41,14 +42,16 @@ public class CustomerLoginController implements ActionListener{
                        mainMenuController = new MainMenuController();  //Inicializa el menú  
                    loginGUI.dispose();
                }else{
-                   loginGUI.Message("El usuario y la contraseña no coinciden"); //Si la información del usuario no coincide manda este mensaje
+                   loginGUI.showMessage("El usuario y la contraseña no coinciden"); //Si la información del usuario no coincide manda este mensaje
                }                      
                }else{
-                   loginGUI.Message("No puede dejar ningún de los dos campos de texto vacíos ");  //Si se deja algún campo vacío pone este mensaje                                                                 
+                   loginGUI.showMessage("No puede dejar ningún de los dos campos de texto vacíos ");  //Si se deja algún campo vacío pone este mensaje                                                                 
                }                                  
                 break;
             case "Back":
-                System.exit(0); //Sale del programa
+                System.out.println("uaua");
+                loginGUI.dispose();
+                
                 break;
         }
     }    

@@ -4,6 +4,7 @@
  */
 package project_restaurant.model;
 
+import project_restaurant.view.menu.OrderTable;
 
 public class PileFood {
 
@@ -13,6 +14,23 @@ public class PileFood {
     public PileFood() {
         length = 0;
         top = null;
+    }
+    
+     public void cleanList() {
+        length = 0;
+        top = null;
+    }
+    
+    public String[][] getMatrizPileFood(){
+    String[][] matrixMeals = new String[length][Food.FOOD_LABELS.length];
+    NodeFood nodeFood = top;
+    for (int i = 0; i < length; i++) {
+        for (int j = 0; j < Food.FOOD_LABELS.length; j++) {                       
+            matrixMeals[i][j] = nodeFood.getFood(j);
+        }
+        nodeFood = nodeFood.getNext();
+    }
+    return matrixMeals;
     }
 
     public void push(Food food) {
@@ -55,4 +73,20 @@ public class PileFood {
         }
         return data;
     }
+
+    public void addRowsToTableModel(OrderTable orderTable) {
+        NodeFood currentNode = top;
+        Object[][] rows = new Object[length][2]; // Creamos un arreglo bidimensional para almacenar todas las filas
+
+        int index = 0;
+        while (currentNode != null) {
+            rows[index][0] = currentNode.getData().getName();
+            rows[index][1] = currentNode.getData().getPrice();
+            index++;
+            currentNode = currentNode.getNext();
+        }
+
+        orderTable.setDataTable(rows); // Pasamos el arreglo bidimensional al método setDataTable
+    }
+
 }

@@ -27,8 +27,8 @@ public class LoginGUI extends javax.swing.JFrame {
         return loginDataPanel;
     }
     
-    public void Message(String dato){
-        JOptionPane.showMessageDialog(null, dato);
+    public void showMessage(String message){
+        JOptionPane.showMessageDialog(null, message);
     }
 
     /**
@@ -54,7 +54,7 @@ public class LoginGUI extends javax.swing.JFrame {
         getContentPane().add(loginButtonsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 640, -1, -1));
 
         login_fondo_img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo rojo base.png"))); // NOI18N
-        getContentPane().add(login_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        getContentPane().add(login_fondo_img, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

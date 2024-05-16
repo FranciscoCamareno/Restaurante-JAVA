@@ -9,7 +9,11 @@ import project_restaurant.model.*;
 
 public class PurchaseOrderController implements ActionListener{
 
+    private OrderGUI orderGUI;
+    private OrderTable orderTable;
+    
     public PurchaseOrderController() {
+    orderTable = orderGUI.getOrderTable1();
     
     }
 
