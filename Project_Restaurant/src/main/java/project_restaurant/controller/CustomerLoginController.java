@@ -56,8 +56,8 @@ public class CustomerLoginController implements ActionListener{
         }
     }    
     
-    public static void main(String[] args) {
-        new CustomerLoginController();
-    }
-    
+//    public static void main(String[] args) {
+//        new CustomerLoginController();
+//    }
+//    
 }
