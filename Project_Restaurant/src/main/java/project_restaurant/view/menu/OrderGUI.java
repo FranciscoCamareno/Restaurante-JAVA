@@ -22,9 +22,9 @@ public class OrderGUI extends javax.swing.JFrame {
     private LoginGUI loginGUI;
     
     public OrderGUI(PileFood pileFood) { 
-        this.pileFood = pileFood;
-        orderTable1.setDataTable(pileFood.getMatrizPileFood());
-        this.tableModel = (DefaultTableModel) orderTable1.getTblOrder().getModel();
+//        this.pileFood = pileFood;
+//        orderTable1.setDataTable(pileFood.getMatrizPileFood());
+//        this.tableModel = (DefaultTableModel) orderTable1.getTblOrder().getModel();
         initComponents();
     }
 
@@ -78,7 +78,7 @@ public class OrderGUI extends javax.swing.JFrame {
 
     private void orderButtonsPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderButtonsPanelMouseClicked
         pileFood.cleanList();
-        orderTable1.setDataTable(pileFood.getMatrizPileFood());
+//        orderTable1.setDataTable(pileFood.getMatrizPileFood());
         loginGUI.showMessage("¡Gracias por su compra!");
     }//GEN-LAST:event_orderButtonsPanelMouseClicked
 

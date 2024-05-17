@@ -25,22 +25,22 @@ public class OrderTable extends javax.swing.JPanel {
         initComponents();
     }
 
-    public JTable getTblOrder() {
-        return tblOrder;
-    }
-
-    public void setTblOrder(JTable tblOrder) {
-        this.tblOrder = tblOrder;
-    }
+//    public JTable getTblOrder() {
+//        return tblOrder;
+//    }
+//
+//    public void setTblOrder(JTable tblOrder) {
+//        this.tblOrder = tblOrder;
+//    }
     
-    public void setDataTable(Object[][] data) {
-    DefaultTableModel model = new DefaultTableModel(data, new String[] {"Name", "Price"});
-    tblOrder.setModel(model);
-    jScrollPane1.setViewportView(tblOrder);
-    tblOrder.setAutoCreateRowSorter(true);
-    sorter = new TableRowSorter<>(model);
-    tblOrder.setRowSorter(sorter);
-}
+//    public void setDataTable(Object[][] data) {
+//    DefaultTableModel model = new DefaultTableModel(data, new String[] {"Name", "Price"});
+//    tblOrder.setModel(model);
+//    jScrollPane1.setViewportView(tblOrder);
+//    tblOrder.setAutoCreateRowSorter(true);
+//    sorter = new TableRowSorter<>(model);
+//    tblOrder.setRowSorter(sorter);
+//}
 
     /**
      * This method is called from within the constructor to initialize the form.

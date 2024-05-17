@@ -74,19 +74,19 @@ public class PileFood {
         return data;
     }
 
-    public void addRowsToTableModel(OrderTable orderTable) {
-        NodeFood currentNode = top;
-        Object[][] rows = new Object[length][2]; // Creamos un arreglo bidimensional para almacenar todas las filas
-
-        int index = 0;
-        while (currentNode != null) {
-            rows[index][0] = currentNode.getData().getName();
-            rows[index][1] = currentNode.getData().getPrice();
-            index++;
-            currentNode = currentNode.getNext();
-        }
-
-        orderTable.setDataTable(rows); // Pasamos el arreglo bidimensional al método setDataTable
-    }
+//    public void addRowsToTableModel(OrderTable orderTable) {
+//        NodeFood currentNode = top;
+//        Object[][] rows = new Object[length][2]; // Creamos un arreglo bidimensional para almacenar todas las filas
+//
+//        int index = 0;
+//        while (currentNode != null) {
+//            rows[index][0] = currentNode.getData().getName();
+//            rows[index][1] = currentNode.getData().getPrice();
+//            index++;
+//            currentNode = currentNode.getNext();
+//        }
+//
+//        orderTable.setDataTable(rows); // Pasamos el arreglo bidimensional al método setDataTable
+//    }
 
 }
